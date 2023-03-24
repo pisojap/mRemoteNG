@@ -43,9 +43,9 @@ namespace mRemoteNG.UI.Forms
             this.helpMenu = new mRemoteNG.UI.Menu.HelpMenu();
             this.mMenSep3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsContainer = new System.Windows.Forms.ToolStripContainer();
+            this._externalToolsToolStrip = new mRemoteNG.UI.Controls.ExternalToolsToolStrip();
             this._quickConnectToolStrip = new mRemoteNG.UI.Controls.QuickConnectToolStrip();
             this._multiSshToolStrip = new mRemoteNG.UI.Controls.MultiSshToolStrip();
-            this._externalToolsToolStrip = new mRemoteNG.UI.Controls.ExternalToolsToolStrip();
             this.tmrAutoSave = new System.Windows.Forms.Timer(this.components);
             this.vsToolStripExtender = new WeifenLuo.WinFormsUI.Docking.VisualStudioToolStripExtender(this.components);
             this.tsModeAdmin = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,7 +63,7 @@ namespace mRemoteNG.UI.Forms
             this.pnlDock.DocumentStyle = WeifenLuo.WinFormsUI.Docking.DocumentStyle.DockingSdi;
             this.pnlDock.Location = new System.Drawing.Point(0, 0);
             this.pnlDock.Name = "pnlDock";
-            this.pnlDock.Size = new System.Drawing.Size(1129, 546);
+            this.pnlDock.Size = new System.Drawing.Size(1129, 461);
             this.pnlDock.TabIndex = 13;
             this.pnlDock.ActiveDocumentChanged += new System.EventHandler(this.pnlDock_ActiveDocumentChanged);
             // 
@@ -73,15 +73,16 @@ namespace mRemoteNG.UI.Forms
             this.msMain.Dock = System.Windows.Forms.DockStyle.None;
             this.msMain.GripMargin = new System.Windows.Forms.Padding(2);
             this.msMain.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.msMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.viewMenu,
             this.toolsMenu,
             this.helpMenu});
-            this.msMain.Location = new System.Drawing.Point(3, 0);
+            this.msMain.Location = new System.Drawing.Point(4, 53);
             this.msMain.Name = "msMain";
             this.msMain.Padding = new System.Windows.Forms.Padding(0, 0, 1, 0);
-            this.msMain.Size = new System.Drawing.Size(151, 25);
+            this.msMain.Size = new System.Drawing.Size(227, 30);
             this.msMain.Stretch = false;
             this.msMain.TabIndex = 0;
             this.msMain.Text = "Main Toolbar";
@@ -90,7 +91,7 @@ namespace mRemoteNG.UI.Forms
             // 
             this.fileMenu.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.fileMenu.Name = "mMenFile";
-            this.fileMenu.Size = new System.Drawing.Size(37, 19);
+            this.fileMenu.Size = new System.Drawing.Size(46, 24);
             this.fileMenu.Text = "&File";
             this.fileMenu.TreeWindow = null;
             // 
@@ -100,7 +101,7 @@ namespace mRemoteNG.UI.Forms
             this.viewMenu.MainForm = null;
             this.viewMenu.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.viewMenu.Name = "mMenView";
-            this.viewMenu.Size = new System.Drawing.Size(44, 19);
+            this.viewMenu.Size = new System.Drawing.Size(55, 24);
             this.viewMenu.Text = "&View";
             this.viewMenu.TsExternalTools = null;
             this.viewMenu.TsMultiSsh = null;
@@ -113,14 +114,14 @@ namespace mRemoteNG.UI.Forms
             this.toolsMenu.MainForm = null;
             this.toolsMenu.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.toolsMenu.Name = "mMenTools";
-            this.toolsMenu.Size = new System.Drawing.Size(46, 19);
+            this.toolsMenu.Size = new System.Drawing.Size(58, 24);
             this.toolsMenu.Text = "&Tools";
             // 
             // helpMenu
             // 
             this.helpMenu.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.helpMenu.Name = "mMenInfo";
-            this.helpMenu.Size = new System.Drawing.Size(44, 19);
+            this.helpMenu.Size = new System.Drawing.Size(55, 24);
             this.helpMenu.Text = "&Help";
             this.helpMenu.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -135,7 +136,7 @@ namespace mRemoteNG.UI.Forms
             // tsContainer.ContentPanel
             // 
             this.tsContainer.ContentPanel.Controls.Add(this.pnlDock);
-            this.tsContainer.ContentPanel.Size = new System.Drawing.Size(1129, 546);
+            this.tsContainer.ContentPanel.Size = new System.Drawing.Size(1129, 461);
             this.tsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tsContainer.Location = new System.Drawing.Point(0, 0);
             this.tsContainer.Name = "tsContainer";
@@ -145,40 +146,43 @@ namespace mRemoteNG.UI.Forms
             // 
             // tsContainer.TopToolStripPanel
             // 
-            this.tsContainer.TopToolStripPanel.Controls.Add(this.msMain);
-            this.tsContainer.TopToolStripPanel.Controls.Add(this._quickConnectToolStrip);
-            this.tsContainer.TopToolStripPanel.Controls.Add(this._multiSshToolStrip);
             this.tsContainer.TopToolStripPanel.Controls.Add(this._externalToolsToolStrip);
+            this.tsContainer.TopToolStripPanel.Controls.Add(this._quickConnectToolStrip);
+            this.tsContainer.TopToolStripPanel.Controls.Add(this.msMain);
+            this.tsContainer.TopToolStripPanel.Controls.Add(this._multiSshToolStrip);
             this.tsContainer.TopToolStripPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            // 
-            // _quickConnectToolStrip
-            // 
-            this._quickConnectToolStrip.BackColor = System.Drawing.SystemColors.Control;
-            this._quickConnectToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this._quickConnectToolStrip.ForeColor = System.Drawing.SystemColors.ControlText;
-            this._quickConnectToolStrip.Location = new System.Drawing.Point(114, 25);
-            this._quickConnectToolStrip.Name = "_quickConnectToolStrip";
-            this._quickConnectToolStrip.Size = new System.Drawing.Size(395, 25);
-            this._quickConnectToolStrip.TabIndex = 18;
-            // 
-            // _multiSshToolStrip
-            // 
-            this._multiSshToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this._multiSshToolStrip.Location = new System.Drawing.Point(3, 0);
-            this._multiSshToolStrip.MinimumSize = new System.Drawing.Size(300, 0);
-            this._multiSshToolStrip.Name = "_multiSshToolStrip";
-            this._multiSshToolStrip.Size = new System.Drawing.Size(376, 25);
-            this._multiSshToolStrip.TabIndex = 1;
             // 
             // _externalToolsToolStrip
             // 
             this._externalToolsToolStrip.BackColor = System.Drawing.SystemColors.Control;
             this._externalToolsToolStrip.Dock = System.Windows.Forms.DockStyle.None;
             this._externalToolsToolStrip.ForeColor = System.Drawing.SystemColors.ControlText;
-            this._externalToolsToolStrip.Location = new System.Drawing.Point(3, 25);
+            this._externalToolsToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this._externalToolsToolStrip.Location = new System.Drawing.Point(4, 0);
             this._externalToolsToolStrip.Name = "_externalToolsToolStrip";
-            this._externalToolsToolStrip.Size = new System.Drawing.Size(111, 25);
+            this._externalToolsToolStrip.Size = new System.Drawing.Size(112, 25);
             this._externalToolsToolStrip.TabIndex = 17;
+            // 
+            // _quickConnectToolStrip
+            // 
+            this._quickConnectToolStrip.BackColor = System.Drawing.SystemColors.Control;
+            this._quickConnectToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this._quickConnectToolStrip.ForeColor = System.Drawing.SystemColors.ControlText;
+            this._quickConnectToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this._quickConnectToolStrip.Location = new System.Drawing.Point(4, 25);
+            this._quickConnectToolStrip.Name = "_quickConnectToolStrip";
+            this._quickConnectToolStrip.Size = new System.Drawing.Size(484, 28);
+            this._quickConnectToolStrip.TabIndex = 18;
+            // 
+            // _multiSshToolStrip
+            // 
+            this._multiSshToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this._multiSshToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this._multiSshToolStrip.Location = new System.Drawing.Point(4, 83);
+            this._multiSshToolStrip.MinimumSize = new System.Drawing.Size(300, 0);
+            this._multiSshToolStrip.Name = "_multiSshToolStrip";
+            this._multiSshToolStrip.Size = new System.Drawing.Size(467, 27);
+            this._multiSshToolStrip.TabIndex = 1;
             // 
             // tmrAutoSave
             // 
@@ -205,7 +209,7 @@ namespace mRemoteNG.UI.Forms
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1129, 571);
             this.Controls.Add(this.tsContainer);
@@ -231,6 +235,7 @@ namespace mRemoteNG.UI.Forms
             this.tsContainer.ResumeLayout(false);
             this.tsContainer.PerformLayout();
             this.ResumeLayout(false);
+
 		}
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

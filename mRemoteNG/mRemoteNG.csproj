@@ -51,6 +51,8 @@
 
   <ItemGroup>
     <None Remove="buildenv.tmp" />
+    <None Remove="Resources\contii.gif" />
+    <None Remove="Resources\contii.png" />
     <None Remove="UI\Font\HandelGotDBol.ttf" />
   </ItemGroup>
 
@@ -425,6 +427,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resources\contii.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\contii.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="UI\Font\HandelGotDBol.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

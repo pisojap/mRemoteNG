@@ -2286,4 +2286,7 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
   <data name="FileMenuWillBeHiddenNow" xml:space="preserve">
     <value>File menu is hidded now. Press Alt button to peek</value>
   </data>
+  <data name="GridView" xml:space="preserve">
+    <value>GridView</value>
+  </data>
 </root>

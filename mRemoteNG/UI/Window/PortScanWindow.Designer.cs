@@ -47,28 +47,28 @@ namespace mRemoteNG.UI.Window
             this.importSSH2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importTelnetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importVNCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnImport = new MrngButton();
-            this.cbProtocol = new MrngComboBox();
+            this.btnImport = new mRemoteNG.UI.Controls.MrngButton();
+            this.cbProtocol = new mRemoteNG.UI.Controls.MrngComboBox();
             this.lblOnlyImport = new mRemoteNG.UI.Controls.MrngLabel();
-            this.clmHost = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmSSH = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmTelnet = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmHTTP = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmHTTPS = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmRlogin = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmRDP = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmVNC = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmOpenPorts = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.clmClosedPorts = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.clmHost = new BrightIdeasSoftware.OLVColumn();
+            this.clmSSH = new BrightIdeasSoftware.OLVColumn();
+            this.clmTelnet = new BrightIdeasSoftware.OLVColumn();
+            this.clmHTTP = new BrightIdeasSoftware.OLVColumn();
+            this.clmHTTPS = new BrightIdeasSoftware.OLVColumn();
+            this.clmRlogin = new BrightIdeasSoftware.OLVColumn();
+            this.clmRDP = new BrightIdeasSoftware.OLVColumn();
+            this.clmVNC = new BrightIdeasSoftware.OLVColumn();
+            this.clmOpenPorts = new BrightIdeasSoftware.OLVColumn();
+            this.clmClosedPorts = new BrightIdeasSoftware.OLVColumn();
             this.prgBar = new mRemoteNG.UI.Controls.MrngProgressBar();
             this.numericSelectorTimeout = new mRemoteNG.UI.Controls.MrngNumericUpDown();
             this.lblTimeout = new System.Windows.Forms.Label();
             this.portEnd = new mRemoteNG.UI.Controls.MrngNumericUpDown();
             this.portStart = new mRemoteNG.UI.Controls.MrngNumericUpDown();
             this.pnlIp = new System.Windows.Forms.TableLayoutPanel();
-            this.btnScan = new MrngButton();
-            this.ngCheckFirstPort = new MrngCheckBox();
-            this.ngCheckLastPort = new MrngCheckBox();
+            this.btnScan = new mRemoteNG.UI.Controls.MrngButton();
+            this.ngCheckFirstPort = new mRemoteNG.UI.Controls.MrngCheckBox();
+            this.ngCheckLastPort = new mRemoteNG.UI.Controls.MrngCheckBox();
             this.pnlImport = new System.Windows.Forms.TableLayoutPanel();
             this.pnlMain = new System.Windows.Forms.TableLayoutPanel();
             this.portScanToolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -84,7 +84,7 @@ namespace mRemoteNG.UI.Window
             // 
             // ipStart
             // 
-            this.ipStart.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ipStart.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ipStart.Location = new System.Drawing.Point(133, 3);
             this.ipStart.Name = "ipStart";
             this.ipStart.Size = new System.Drawing.Size(124, 18);
@@ -93,7 +93,7 @@ namespace mRemoteNG.UI.Window
             // 
             // ipEnd
             // 
-            this.ipEnd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ipEnd.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ipEnd.Location = new System.Drawing.Point(133, 27);
             this.ipEnd.Name = "ipEnd";
             this.ipEnd.Size = new System.Drawing.Size(124, 18);
@@ -126,13 +126,11 @@ namespace mRemoteNG.UI.Window
             // 
             this.olvHosts.CellEditUseWholeCell = false;
             this.olvHosts.ContextMenuStrip = this.resultsMenuStrip;
-            this.olvHosts.Cursor = System.Windows.Forms.Cursors.Default;
             this.olvHosts.DecorateLines = true;
             this.olvHosts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.olvHosts.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.olvHosts.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.olvHosts.FullRowSelect = true;
             this.olvHosts.GridLines = true;
-            this.olvHosts.HideSelection = false;
             this.olvHosts.Location = new System.Drawing.Point(3, 168);
             this.olvHosts.Name = "olvHosts";
             this.olvHosts.ShowGroups = false;
@@ -143,6 +141,7 @@ namespace mRemoteNG.UI.Window
             // 
             // resultsMenuStrip
             // 
+            this.resultsMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.resultsMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.importHTTPToolStripMenuItem,
             this.importHTTPSToolStripMenuItem,
@@ -152,60 +151,60 @@ namespace mRemoteNG.UI.Window
             this.importTelnetToolStripMenuItem,
             this.importVNCToolStripMenuItem});
             this.resultsMenuStrip.Name = "resultsMenuStrip";
-            this.resultsMenuStrip.Size = new System.Drawing.Size(148, 158);
+            this.resultsMenuStrip.Size = new System.Drawing.Size(171, 172);
             // 
             // importHTTPToolStripMenuItem
             // 
             this.importHTTPToolStripMenuItem.Name = "importHTTPToolStripMenuItem";
-            this.importHTTPToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importHTTPToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importHTTPToolStripMenuItem.Text = "Import HTTP";
             this.importHTTPToolStripMenuItem.Click += new System.EventHandler(this.importHTTPToolStripMenuItem_Click);
             // 
             // importHTTPSToolStripMenuItem
             // 
             this.importHTTPSToolStripMenuItem.Name = "importHTTPSToolStripMenuItem";
-            this.importHTTPSToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importHTTPSToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importHTTPSToolStripMenuItem.Text = "Import HTTPS";
             this.importHTTPSToolStripMenuItem.Click += new System.EventHandler(this.importHTTPSToolStripMenuItem_Click);
             // 
             // importRDPToolStripMenuItem
             // 
             this.importRDPToolStripMenuItem.Name = "importRDPToolStripMenuItem";
-            this.importRDPToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importRDPToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importRDPToolStripMenuItem.Text = "Import RDP";
             this.importRDPToolStripMenuItem.Click += new System.EventHandler(this.importRDPToolStripMenuItem_Click);
             // 
             // importRloginToolStripMenuItem
             // 
             this.importRloginToolStripMenuItem.Name = "importRloginToolStripMenuItem";
-            this.importRloginToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importRloginToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importRloginToolStripMenuItem.Text = "Import Rlogin";
             this.importRloginToolStripMenuItem.Click += new System.EventHandler(this.importRloginToolStripMenuItem_Click);
             // 
             // importSSH2ToolStripMenuItem
             // 
             this.importSSH2ToolStripMenuItem.Name = "importSSH2ToolStripMenuItem";
-            this.importSSH2ToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importSSH2ToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importSSH2ToolStripMenuItem.Text = "Import SSH2";
             this.importSSH2ToolStripMenuItem.Click += new System.EventHandler(this.importSSH2ToolStripMenuItem_Click);
             // 
             // importTelnetToolStripMenuItem
             // 
             this.importTelnetToolStripMenuItem.Name = "importTelnetToolStripMenuItem";
-            this.importTelnetToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importTelnetToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importTelnetToolStripMenuItem.Text = "Import Telnet";
             this.importTelnetToolStripMenuItem.Click += new System.EventHandler(this.importTelnetToolStripMenuItem_Click);
             // 
             // importVNCToolStripMenuItem
             // 
             this.importVNCToolStripMenuItem.Name = "importVNCToolStripMenuItem";
-            this.importVNCToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.importVNCToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.importVNCToolStripMenuItem.Text = "Import VNC";
             this.importVNCToolStripMenuItem.Click += new System.EventHandler(this.importVNCToolStripMenuItem_Click);
             // 
             // btnImport
             // 
-            this.btnImport._mice = MrngButton.MouseState.OUT;
+            this.btnImport._mice = mRemoteNG.UI.Controls.MrngButton.MouseState.OUT;
             this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImport.Location = new System.Drawing.Point(765, 27);
             this.btnImport.Name = "btnImport";
@@ -217,7 +216,7 @@ namespace mRemoteNG.UI.Window
             // 
             // cbProtocol
             // 
-            this.cbProtocol._mice = MrngComboBox.MouseState.HOVER;
+            this.cbProtocol._mice = mRemoteNG.UI.Controls.MrngComboBox.MouseState.HOVER;
             this.cbProtocol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProtocol.FormattingEnabled = true;
@@ -231,7 +230,7 @@ namespace mRemoteNG.UI.Window
             "VNC"});
             this.cbProtocol.Location = new System.Drawing.Point(3, 27);
             this.cbProtocol.Name = "cbProtocol";
-            this.cbProtocol.Size = new System.Drawing.Size(144, 21);
+            this.cbProtocol.Size = new System.Drawing.Size(144, 27);
             this.cbProtocol.TabIndex = 7;
             // 
             // lblOnlyImport
@@ -326,7 +325,7 @@ namespace mRemoteNG.UI.Window
             0,
             0});
             this.numericSelectorTimeout.Name = "numericSelectorTimeout";
-            this.numericSelectorTimeout.Size = new System.Drawing.Size(67, 22);
+            this.numericSelectorTimeout.Size = new System.Drawing.Size(67, 26);
             this.numericSelectorTimeout.TabIndex = 5;
             this.numericSelectorTimeout.Value = new decimal(new int[] {
             5,
@@ -355,7 +354,7 @@ namespace mRemoteNG.UI.Window
             0,
             0});
             this.portEnd.Name = "portEnd";
-            this.portEnd.Size = new System.Drawing.Size(67, 22);
+            this.portEnd.Size = new System.Drawing.Size(67, 26);
             this.portEnd.TabIndex = 4;
             this.portEnd.Value = new decimal(new int[] {
             65535,
@@ -374,7 +373,7 @@ namespace mRemoteNG.UI.Window
             0,
             0});
             this.portStart.Name = "portStart";
-            this.portStart.Size = new System.Drawing.Size(67, 22);
+            this.portStart.Size = new System.Drawing.Size(67, 26);
             this.portStart.TabIndex = 3;
             this.portStart.Enter += new System.EventHandler(this.portStart_Enter);
             // 
@@ -410,9 +409,9 @@ namespace mRemoteNG.UI.Window
             // 
             // btnScan
             // 
-            this.btnScan._mice = MrngButton.MouseState.OUT;
+            this.btnScan._mice = mRemoteNG.UI.Controls.MrngButton.MouseState.OUT;
             this.btnScan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnScan.Image = global::mRemoteNG.Properties.Resources.Search_16x;
+            this.btnScan.Image = ((System.Drawing.Image)(resources.GetObject("btnScan.Image")));
             this.btnScan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnScan.Location = new System.Drawing.Point(765, 99);
             this.btnScan.Name = "btnScan";
@@ -425,12 +424,12 @@ namespace mRemoteNG.UI.Window
             // 
             // ngCheckFirstPort
             // 
-            this.ngCheckFirstPort._mice = MrngCheckBox.MouseState.OUT;
+            this.ngCheckFirstPort._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.ngCheckFirstPort.AutoSize = true;
-            this.ngCheckFirstPort.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngCheckFirstPort.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ngCheckFirstPort.Location = new System.Drawing.Point(3, 51);
             this.ngCheckFirstPort.Name = "ngCheckFirstPort";
-            this.ngCheckFirstPort.Size = new System.Drawing.Size(72, 17);
+            this.ngCheckFirstPort.Size = new System.Drawing.Size(86, 18);
             this.ngCheckFirstPort.TabIndex = 17;
             this.ngCheckFirstPort.Text = "First Port";
             this.ngCheckFirstPort.UseVisualStyleBackColor = true;
@@ -438,12 +437,12 @@ namespace mRemoteNG.UI.Window
             // 
             // ngCheckLastPort
             // 
-            this.ngCheckLastPort._mice = MrngCheckBox.MouseState.OUT;
+            this.ngCheckLastPort._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.ngCheckLastPort.AutoSize = true;
-            this.ngCheckLastPort.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngCheckLastPort.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ngCheckLastPort.Location = new System.Drawing.Point(3, 75);
             this.ngCheckLastPort.Name = "ngCheckLastPort";
-            this.ngCheckLastPort.Size = new System.Drawing.Size(70, 17);
+            this.ngCheckLastPort.Size = new System.Drawing.Size(85, 18);
             this.ngCheckLastPort.TabIndex = 18;
             this.ngCheckLastPort.Text = "Last Port";
             this.ngCheckLastPort.UseVisualStyleBackColor = true;
@@ -488,12 +487,12 @@ namespace mRemoteNG.UI.Window
             // PortScanWindow
             // 
             this.AcceptButton = this.btnImport;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PortScanWindow";
             this.TabText = "Port Scan";
             this.Text = "Port Scan";

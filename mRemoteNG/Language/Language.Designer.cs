@@ -6585,5 +6585,15 @@ namespace mRemoteNG.Resources.Language {
                 return ResourceManager.GetString("ShowForUser", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridView
+        {
+            get
+            {
+                return ResourceManager.GetString("GridView", resourceCulture);
+            }
+        }
     }
 }

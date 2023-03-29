@@ -12,6 +12,7 @@ namespace mRemoteNG.UI.Menu
         private ToolStripMenuItem _mMenToolsExternalApps;
         private ToolStripMenuItem _mMenToolsPortScan;
         private ToolStripMenuItem _mMenToolsUvncsc;
+        private ToolStripMenuItem _mMenToolsGridView;
 
         public Form MainForm { get; set; }
         public ICredentialRepositoryList CredentialProviderCatalog { get; set; }
@@ -27,6 +28,7 @@ namespace mRemoteNG.UI.Menu
             _mMenToolsUvncsc = new ToolStripMenuItem();
             _mMenToolsExternalApps = new ToolStripMenuItem();
             _mMenToolsPortScan = new ToolStripMenuItem();
+            _mMenToolsGridView = new ToolStripMenuItem();
             // 
             // mMenTools
             // 
@@ -35,7 +37,8 @@ namespace mRemoteNG.UI.Menu
                 _mMenToolsSshTransfer,
                 _mMenToolsUvncsc,
                 _mMenToolsExternalApps,
-                _mMenToolsPortScan
+                _mMenToolsPortScan,
+                _mMenToolsGridView,
             });
             Name = "mMenTools";
             Size = new System.Drawing.Size(48, 20);
@@ -72,6 +75,13 @@ namespace mRemoteNG.UI.Menu
             _mMenToolsPortScan.Size = new System.Drawing.Size(184, 22);
             _mMenToolsPortScan.Text = Language.PortScan;
             _mMenToolsPortScan.Click += mMenToolsPortScan_Click;
+            // 
+            // mMenToolsGrid
+            // 
+            _mMenToolsGridView.Name = "mMenToolsGrid";
+            _mMenToolsGridView.Size = new System.Drawing.Size(184, 22);
+            _mMenToolsGridView.Text = Language.GridView;
+            _mMenToolsGridView.Click += mMenToolsGridView_Click;
         }
 
         public void ApplyLanguage()
@@ -80,6 +90,7 @@ namespace mRemoteNG.UI.Menu
             _mMenToolsSshTransfer.Text = Language.SshFileTransfer;
             _mMenToolsExternalApps.Text = Language.ExternalTool;
             _mMenToolsPortScan.Text = Language.PortScan;
+            _mMenToolsGridView.Text = Language.GridView;
         }
 
         #region Tools
@@ -107,6 +118,11 @@ namespace mRemoteNG.UI.Menu
         private void mMenToolsOptions_Click(object sender, EventArgs e)
         {
             Windows.Show(WindowType.Options);
+        }
+
+        private void mMenToolsGridView_Click(object sender, EventArgs e)
+        {
+            Windows.Show(WindowType.GridWindow);
         }
 
         #endregion

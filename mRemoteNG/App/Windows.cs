@@ -2,6 +2,7 @@
 using mRemoteNG.UI;
 using mRemoteNG.UI.Forms;
 using mRemoteNG.UI.Window;
+using UI.Window;
 
 namespace mRemoteNG.App
 {
@@ -12,6 +13,7 @@ namespace mRemoteNG.App
         private static PortScanWindow _portscanForm;
         private static UltraVNCWindow _ultravncscForm;
         private static ConnectionTreeWindow _treeForm;
+        private static GridWindow _gridWindowForm;
 
         internal static ConnectionTreeWindow TreeForm
         {
@@ -68,6 +70,11 @@ namespace mRemoteNG.App
                         if (_ultravncscForm == null || _ultravncscForm.IsDisposed)
                             _ultravncscForm = new UltraVNCWindow();
                         _ultravncscForm.Show(dockPanel);
+                        break;
+                    case WindowType.GridWindow:
+                        if (_gridWindowForm == null || _gridWindowForm.IsDisposed)
+                            _gridWindowForm = new GridWindow();
+                        _gridWindowForm.Show(dockPanel);
                         break;
                 }
             }

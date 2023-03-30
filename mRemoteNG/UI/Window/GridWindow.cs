@@ -1,4 +1,7 @@
-﻿using mRemoteNG.UI.Window;
+﻿using mRemoteNG.App;
+using mRemoteNG.Messages;
+using mRemoteNG.UI.Controls.ConnectionTree;
+using mRemoteNG.UI.Window;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +18,12 @@ namespace UI.Window
         {
             InitializeComponent();
             this.SetFormText("Grid");
+            var l = Runtime.ConnectionsService.ConnectionTreeModel.GetRecursiveChildList();
+
+            foreach (var item in l)
+            {
+                Runtime.MessageCollector.AddMessage(MessageClass.InformationMsg, $"-{item.Name}");
+            }
         }
     }
 }

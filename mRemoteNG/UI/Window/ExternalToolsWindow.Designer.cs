@@ -42,36 +42,36 @@ namespace mRemoteNG.UI.Window
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExternalToolsWindow));
             this.ToolsListObjView = new mRemoteNG.UI.Controls.MrngListView();
-            this.DisplayNameColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.FilenameColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.ArgumentsColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.WorkingDirColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.WaitForExitColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.TryToIntegrateColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.RunElevateHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.ShowOnToolbarColumnHeader = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.DisplayNameColumnHeader = new BrightIdeasSoftware.OLVColumn();
+            this.FilenameColumnHeader = new BrightIdeasSoftware.OLVColumn();
+            this.ArgumentsColumnHeader = new BrightIdeasSoftware.OLVColumn();
+            this.WorkingDirColumnHeader = new BrightIdeasSoftware.OLVColumn();
+            this.WaitForExitColumnHeader = new BrightIdeasSoftware.OLVColumn();
+            this.TryToIntegrateColumnHeader = new BrightIdeasSoftware.OLVColumn();
+            this.RunElevateHeader = new BrightIdeasSoftware.OLVColumn();
+            this.ShowOnToolbarColumnHeader = new BrightIdeasSoftware.OLVColumn();
             this.ToolsContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NewToolMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteToolMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.LaunchToolMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PropertiesGroupBox = new MrngGroupBox();
+            this.PropertiesGroupBox = new mRemoteNG.UI.Controls.MrngGroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.DisplayNameLabel = new mRemoteNG.UI.Controls.MrngLabel();
-            this.ShowOnToolbarCheckBox = new MrngCheckBox();
+            this.ShowOnToolbarCheckBox = new mRemoteNG.UI.Controls.MrngCheckBox();
             this.WorkingDirTextBox = new mRemoteNG.UI.Controls.MrngTextBox();
             this.DisplayNameTextBox = new mRemoteNG.UI.Controls.MrngTextBox();
             this.FilenameTextBox = new mRemoteNG.UI.Controls.MrngTextBox();
             this.ArgumentsCheckBox = new mRemoteNG.UI.Controls.MrngTextBox();
             this.FilenameLabel = new mRemoteNG.UI.Controls.MrngLabel();
-            this.RunElevatedCheckBox = new MrngCheckBox();
+            this.RunElevatedCheckBox = new mRemoteNG.UI.Controls.MrngCheckBox();
             this.ArgumentsLabel = new mRemoteNG.UI.Controls.MrngLabel();
-            this.TryToIntegrateCheckBox = new MrngCheckBox();
+            this.TryToIntegrateCheckBox = new mRemoteNG.UI.Controls.MrngCheckBox();
             this.WorkingDirLabel = new mRemoteNG.UI.Controls.MrngLabel();
             this.OptionsLabel = new mRemoteNG.UI.Controls.MrngLabel();
-            this.WaitForExitCheckBox = new MrngCheckBox();
-            this.BrowseButton = new MrngButton();
-            this.BrowseWorkingDir = new MrngButton();
+            this.WaitForExitCheckBox = new mRemoteNG.UI.Controls.MrngCheckBox();
+            this.BrowseButton = new mRemoteNG.UI.Controls.MrngButton();
+            this.BrowseWorkingDir = new mRemoteNG.UI.Controls.MrngButton();
             this.ToolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.NewToolToolstripButton = new System.Windows.Forms.ToolStripButton();
@@ -115,17 +115,16 @@ namespace mRemoteNG.UI.Window
             this.RunElevateHeader,
             this.ShowOnToolbarColumnHeader});
             this.ToolsListObjView.ContextMenuStrip = this.ToolsContextMenuStrip;
-            this.ToolsListObjView.Cursor = System.Windows.Forms.Cursors.Default;
             this.ToolsListObjView.DecorateLines = true;
+            this.ToolsListObjView.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ToolsListObjView.FullRowSelect = true;
             this.ToolsListObjView.GridLines = true;
-            this.ToolsListObjView.HideSelection = false;
             this.ToolsListObjView.Location = new System.Drawing.Point(0, 0);
             this.ToolsListObjView.Name = "ToolsListObjView";
             this.ToolsListObjView.RenderNonEditableCheckboxesAsDisabled = true;
             this.ToolsListObjView.ShowCommandMenuOnRightClick = true;
             this.ToolsListObjView.ShowGroups = false;
-            this.ToolsListObjView.Size = new System.Drawing.Size(827, 186);
+            this.ToolsListObjView.Size = new System.Drawing.Size(827, 184);
             this.ToolsListObjView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ToolsListObjView.TabIndex = 0;
             this.ToolsListObjView.UseCompatibleStateImageBehavior = false;
@@ -205,44 +204,45 @@ namespace mRemoteNG.UI.Window
             // 
             // ToolsContextMenuStrip
             // 
+            this.ToolsContextMenuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ToolsContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NewToolMenuItem,
             this.DeleteToolMenuItem,
             this.ToolStripSeparator1,
             this.LaunchToolMenuItem});
             this.ToolsContextMenuStrip.Name = "cMenApps";
-            this.ToolsContextMenuStrip.Size = new System.Drawing.Size(220, 76);
+            this.ToolsContextMenuStrip.Size = new System.Drawing.Size(267, 88);
             // 
             // NewToolMenuItem
             // 
-            this.NewToolMenuItem.Image = global::mRemoteNG.Properties.Resources.Add_16x;
+            this.NewToolMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("NewToolMenuItem.Image")));
             this.NewToolMenuItem.Name = "NewToolMenuItem";
             this.NewToolMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.F4)));
-            this.NewToolMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.NewToolMenuItem.Size = new System.Drawing.Size(266, 26);
             this.NewToolMenuItem.Text = "New External Tool";
             this.NewToolMenuItem.Click += new System.EventHandler(this.NewTool_Click);
             // 
             // DeleteToolMenuItem
             // 
             this.DeleteToolMenuItem.Enabled = false;
-            this.DeleteToolMenuItem.Image = global::mRemoteNG.Properties.Resources.Remove_16x;
+            this.DeleteToolMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("DeleteToolMenuItem.Image")));
             this.DeleteToolMenuItem.Name = "DeleteToolMenuItem";
             this.DeleteToolMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.DeleteToolMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.DeleteToolMenuItem.Size = new System.Drawing.Size(266, 26);
             this.DeleteToolMenuItem.Text = "Delete External Tool...";
             this.DeleteToolMenuItem.Click += new System.EventHandler(this.DeleteTool_Click);
             // 
             // ToolStripSeparator1
             // 
             this.ToolStripSeparator1.Name = "ToolStripSeparator1";
-            this.ToolStripSeparator1.Size = new System.Drawing.Size(216, 6);
+            this.ToolStripSeparator1.Size = new System.Drawing.Size(263, 6);
             // 
             // LaunchToolMenuItem
             // 
             this.LaunchToolMenuItem.Enabled = false;
-            this.LaunchToolMenuItem.Image = global::mRemoteNG.Properties.Resources.Run_16x;
+            this.LaunchToolMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("LaunchToolMenuItem.Image")));
             this.LaunchToolMenuItem.Name = "LaunchToolMenuItem";
-            this.LaunchToolMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.LaunchToolMenuItem.Size = new System.Drawing.Size(266, 26);
             this.LaunchToolMenuItem.Text = "Launch External Tool";
             this.LaunchToolMenuItem.Click += new System.EventHandler(this.LaunchTool_Click);
             // 
@@ -252,7 +252,7 @@ namespace mRemoteNG.UI.Window
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PropertiesGroupBox.Controls.Add(this.tableLayoutPanel1);
             this.PropertiesGroupBox.Enabled = false;
-            this.PropertiesGroupBox.Location = new System.Drawing.Point(0, 192);
+            this.PropertiesGroupBox.Location = new System.Drawing.Point(0, 190);
             this.PropertiesGroupBox.Name = "PropertiesGroupBox";
             this.PropertiesGroupBox.Size = new System.Drawing.Size(827, 184);
             this.PropertiesGroupBox.TabIndex = 1;
@@ -283,7 +283,7 @@ namespace mRemoteNG.UI.Window
             this.tableLayoutPanel1.Controls.Add(this.BrowseButton, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.BrowseWorkingDir, 4, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
@@ -293,7 +293,7 @@ namespace mRemoteNG.UI.Window
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(821, 163);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(821, 159);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // DisplayNameLabel
@@ -302,20 +302,21 @@ namespace mRemoteNG.UI.Window
             this.DisplayNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DisplayNameLabel.Location = new System.Drawing.Point(3, 0);
             this.DisplayNameLabel.Name = "DisplayNameLabel";
-            this.DisplayNameLabel.Size = new System.Drawing.Size(104, 26);
+            this.DisplayNameLabel.Size = new System.Drawing.Size(123, 26);
             this.DisplayNameLabel.TabIndex = 0;
             this.DisplayNameLabel.Text = "Display Name:";
             this.DisplayNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ShowOnToolbarCheckBox
             // 
-            this.ShowOnToolbarCheckBox._mice = MrngCheckBox.MouseState.HOVER;
+            this.ShowOnToolbarCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.ShowOnToolbarCheckBox.AutoSize = true;
             this.ShowOnToolbarCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ShowOnToolbarCheckBox.Location = new System.Drawing.Point(239, 133);
+            this.ShowOnToolbarCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ShowOnToolbarCheckBox.Location = new System.Drawing.Point(275, 133);
             this.ShowOnToolbarCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.ShowOnToolbarCheckBox.Name = "ShowOnToolbarCheckBox";
-            this.ShowOnToolbarCheckBox.Size = new System.Drawing.Size(113, 20);
+            this.ShowOnToolbarCheckBox.Size = new System.Drawing.Size(132, 20);
             this.ShowOnToolbarCheckBox.TabIndex = 10;
             this.ShowOnToolbarCheckBox.Text = "Show on toolbar";
             this.ShowOnToolbarCheckBox.UseVisualStyleBackColor = true;
@@ -326,10 +327,11 @@ namespace mRemoteNG.UI.Window
             this.WorkingDirTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.WorkingDirTextBox, 3);
             this.WorkingDirTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WorkingDirTextBox.Location = new System.Drawing.Point(110, 80);
+            this.WorkingDirTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WorkingDirTextBox.Location = new System.Drawing.Point(129, 80);
             this.WorkingDirTextBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.WorkingDirTextBox.Name = "WorkingDirTextBox";
-            this.WorkingDirTextBox.Size = new System.Drawing.Size(607, 22);
+            this.WorkingDirTextBox.Size = new System.Drawing.Size(588, 26);
             this.WorkingDirTextBox.TabIndex = 5;
             this.WorkingDirTextBox.Leave += new System.EventHandler(this.PropertyControl_ChangedOrLostFocus);
             // 
@@ -338,10 +340,11 @@ namespace mRemoteNG.UI.Window
             this.DisplayNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.DisplayNameTextBox, 3);
             this.DisplayNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DisplayNameTextBox.Location = new System.Drawing.Point(110, 2);
+            this.DisplayNameTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayNameTextBox.Location = new System.Drawing.Point(129, 2);
             this.DisplayNameTextBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.DisplayNameTextBox.Name = "DisplayNameTextBox";
-            this.DisplayNameTextBox.Size = new System.Drawing.Size(607, 22);
+            this.DisplayNameTextBox.Size = new System.Drawing.Size(588, 26);
             this.DisplayNameTextBox.TabIndex = 1;
             this.DisplayNameTextBox.LostFocus += new System.EventHandler(this.PropertyControl_ChangedOrLostFocus);
             // 
@@ -350,10 +353,11 @@ namespace mRemoteNG.UI.Window
             this.FilenameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.FilenameTextBox, 3);
             this.FilenameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FilenameTextBox.Location = new System.Drawing.Point(110, 28);
+            this.FilenameTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FilenameTextBox.Location = new System.Drawing.Point(129, 28);
             this.FilenameTextBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.FilenameTextBox.Name = "FilenameTextBox";
-            this.FilenameTextBox.Size = new System.Drawing.Size(607, 22);
+            this.FilenameTextBox.Size = new System.Drawing.Size(588, 26);
             this.FilenameTextBox.TabIndex = 2;
             this.FilenameTextBox.LostFocus += new System.EventHandler(this.PropertyControl_ChangedOrLostFocus);
             // 
@@ -362,10 +366,11 @@ namespace mRemoteNG.UI.Window
             this.ArgumentsCheckBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.ArgumentsCheckBox, 3);
             this.ArgumentsCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ArgumentsCheckBox.Location = new System.Drawing.Point(110, 54);
+            this.ArgumentsCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ArgumentsCheckBox.Location = new System.Drawing.Point(129, 54);
             this.ArgumentsCheckBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.ArgumentsCheckBox.Name = "ArgumentsCheckBox";
-            this.ArgumentsCheckBox.Size = new System.Drawing.Size(607, 22);
+            this.ArgumentsCheckBox.Size = new System.Drawing.Size(588, 26);
             this.ArgumentsCheckBox.TabIndex = 4;
             this.ArgumentsCheckBox.LostFocus += new System.EventHandler(this.PropertyControl_ChangedOrLostFocus);
             // 
@@ -375,20 +380,21 @@ namespace mRemoteNG.UI.Window
             this.FilenameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FilenameLabel.Location = new System.Drawing.Point(3, 26);
             this.FilenameLabel.Name = "FilenameLabel";
-            this.FilenameLabel.Size = new System.Drawing.Size(104, 26);
+            this.FilenameLabel.Size = new System.Drawing.Size(123, 26);
             this.FilenameLabel.TabIndex = 2;
             this.FilenameLabel.Text = "Filename:";
             this.FilenameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RunElevatedCheckBox
             // 
-            this.RunElevatedCheckBox._mice = MrngCheckBox.MouseState.HOVER;
+            this.RunElevatedCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.RunElevatedCheckBox.AutoSize = true;
             this.RunElevatedCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RunElevatedCheckBox.Location = new System.Drawing.Point(113, 133);
+            this.RunElevatedCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RunElevatedCheckBox.Location = new System.Drawing.Point(132, 133);
             this.RunElevatedCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.RunElevatedCheckBox.Name = "RunElevatedCheckBox";
-            this.RunElevatedCheckBox.Size = new System.Drawing.Size(93, 20);
+            this.RunElevatedCheckBox.Size = new System.Drawing.Size(110, 20);
             this.RunElevatedCheckBox.TabIndex = 9;
             this.RunElevatedCheckBox.Text = "Run Elevated";
             this.RunElevatedCheckBox.UseVisualStyleBackColor = true;
@@ -400,20 +406,21 @@ namespace mRemoteNG.UI.Window
             this.ArgumentsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ArgumentsLabel.Location = new System.Drawing.Point(3, 52);
             this.ArgumentsLabel.Name = "ArgumentsLabel";
-            this.ArgumentsLabel.Size = new System.Drawing.Size(104, 26);
+            this.ArgumentsLabel.Size = new System.Drawing.Size(123, 26);
             this.ArgumentsLabel.TabIndex = 5;
             this.ArgumentsLabel.Text = "Arguments:";
             this.ArgumentsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TryToIntegrateCheckBox
             // 
-            this.TryToIntegrateCheckBox._mice = MrngCheckBox.MouseState.HOVER;
+            this.TryToIntegrateCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.TryToIntegrateCheckBox.AutoSize = true;
             this.TryToIntegrateCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TryToIntegrateCheckBox.Location = new System.Drawing.Point(239, 107);
+            this.TryToIntegrateCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TryToIntegrateCheckBox.Location = new System.Drawing.Point(275, 107);
             this.TryToIntegrateCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.TryToIntegrateCheckBox.Name = "TryToIntegrateCheckBox";
-            this.TryToIntegrateCheckBox.Size = new System.Drawing.Size(113, 20);
+            this.TryToIntegrateCheckBox.Size = new System.Drawing.Size(132, 20);
             this.TryToIntegrateCheckBox.TabIndex = 8;
             this.TryToIntegrateCheckBox.Text = "Try to integrate";
             this.TryToIntegrateCheckBox.UseVisualStyleBackColor = true;
@@ -425,7 +432,7 @@ namespace mRemoteNG.UI.Window
             this.WorkingDirLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WorkingDirLabel.Location = new System.Drawing.Point(3, 78);
             this.WorkingDirLabel.Name = "WorkingDirLabel";
-            this.WorkingDirLabel.Size = new System.Drawing.Size(104, 26);
+            this.WorkingDirLabel.Size = new System.Drawing.Size(123, 26);
             this.WorkingDirLabel.TabIndex = 11;
             this.WorkingDirLabel.Text = "Working Directory:";
             this.WorkingDirLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,20 +443,21 @@ namespace mRemoteNG.UI.Window
             this.OptionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OptionsLabel.Location = new System.Drawing.Point(3, 104);
             this.OptionsLabel.Name = "OptionsLabel";
-            this.OptionsLabel.Size = new System.Drawing.Size(104, 26);
+            this.OptionsLabel.Size = new System.Drawing.Size(123, 26);
             this.OptionsLabel.TabIndex = 7;
             this.OptionsLabel.Text = "Options:";
             this.OptionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // WaitForExitCheckBox
             // 
-            this.WaitForExitCheckBox._mice = MrngCheckBox.MouseState.HOVER;
+            this.WaitForExitCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.WaitForExitCheckBox.AutoSize = true;
             this.WaitForExitCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WaitForExitCheckBox.Location = new System.Drawing.Point(113, 107);
+            this.WaitForExitCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WaitForExitCheckBox.Location = new System.Drawing.Point(132, 107);
             this.WaitForExitCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.WaitForExitCheckBox.Name = "WaitForExitCheckBox";
-            this.WaitForExitCheckBox.Size = new System.Drawing.Size(93, 20);
+            this.WaitForExitCheckBox.Size = new System.Drawing.Size(110, 20);
             this.WaitForExitCheckBox.TabIndex = 7;
             this.WaitForExitCheckBox.Text = "Wait for exit";
             this.WaitForExitCheckBox.UseVisualStyleBackColor = true;
@@ -458,7 +466,7 @@ namespace mRemoteNG.UI.Window
             // 
             // BrowseButton
             // 
-            this.BrowseButton._mice = MrngButton.MouseState.HOVER;
+            this.BrowseButton._mice = mRemoteNG.UI.Controls.MrngButton.MouseState.OUT;
             this.BrowseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BrowseButton.Location = new System.Drawing.Point(723, 29);
             this.BrowseButton.Name = "BrowseButton";
@@ -471,7 +479,7 @@ namespace mRemoteNG.UI.Window
             // 
             // BrowseWorkingDir
             // 
-            this.BrowseWorkingDir._mice = MrngButton.MouseState.HOVER;
+            this.BrowseWorkingDir._mice = mRemoteNG.UI.Controls.MrngButton.MouseState.OUT;
             this.BrowseWorkingDir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BrowseWorkingDir.Location = new System.Drawing.Point(723, 81);
             this.BrowseWorkingDir.Name = "BrowseWorkingDir";
@@ -488,7 +496,7 @@ namespace mRemoteNG.UI.Window
             // 
             this.ToolStripContainer.ContentPanel.Controls.Add(this.PropertiesGroupBox);
             this.ToolStripContainer.ContentPanel.Controls.Add(this.ToolsListObjView);
-            this.ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(827, 376);
+            this.ToolStripContainer.ContentPanel.Size = new System.Drawing.Size(827, 374);
             this.ToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ToolStripContainer.Location = new System.Drawing.Point(0, 0);
             this.ToolStripContainer.Name = "ToolStripContainer";
@@ -505,47 +513,48 @@ namespace mRemoteNG.UI.Window
             // 
             this.ToolStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.NewToolToolstripButton,
             this.DeleteToolToolstripButton,
             this.ToolStripSeparator2,
             this.LaunchToolToolstripButton});
-            this.ToolStrip.Location = new System.Drawing.Point(3, 0);
+            this.ToolStrip.Location = new System.Drawing.Point(4, 0);
             this.ToolStrip.Name = "ToolStrip";
-            this.ToolStrip.Size = new System.Drawing.Size(186, 25);
+            this.ToolStrip.Size = new System.Drawing.Size(228, 27);
             this.ToolStrip.TabIndex = 0;
             // 
             // NewToolToolstripButton
             // 
-            this.NewToolToolstripButton.Image = global::mRemoteNG.Properties.Resources.Add_16x;
+            this.NewToolToolstripButton.Image = ((System.Drawing.Image)(resources.GetObject("NewToolToolstripButton.Image")));
             this.NewToolToolstripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.NewToolToolstripButton.Name = "NewToolToolstripButton";
-            this.NewToolToolstripButton.Size = new System.Drawing.Size(51, 22);
+            this.NewToolToolstripButton.Size = new System.Drawing.Size(63, 24);
             this.NewToolToolstripButton.Text = "New";
             this.NewToolToolstripButton.Click += new System.EventHandler(this.NewTool_Click);
             // 
             // DeleteToolToolstripButton
             // 
             this.DeleteToolToolstripButton.Enabled = false;
-            this.DeleteToolToolstripButton.Image = global::mRemoteNG.Properties.Resources.Remove_16x;
+            this.DeleteToolToolstripButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteToolToolstripButton.Image")));
             this.DeleteToolToolstripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.DeleteToolToolstripButton.Name = "DeleteToolToolstripButton";
-            this.DeleteToolToolstripButton.Size = new System.Drawing.Size(60, 22);
+            this.DeleteToolToolstripButton.Size = new System.Drawing.Size(77, 24);
             this.DeleteToolToolstripButton.Text = "Delete";
             this.DeleteToolToolstripButton.Click += new System.EventHandler(this.DeleteTool_Click);
             // 
             // ToolStripSeparator2
             // 
             this.ToolStripSeparator2.Name = "ToolStripSeparator2";
-            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.ToolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // LaunchToolToolstripButton
             // 
             this.LaunchToolToolstripButton.Enabled = false;
-            this.LaunchToolToolstripButton.Image = global::mRemoteNG.Properties.Resources.Run_16x;
+            this.LaunchToolToolstripButton.Image = ((System.Drawing.Image)(resources.GetObject("LaunchToolToolstripButton.Image")));
             this.LaunchToolToolstripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LaunchToolToolstripButton.Name = "LaunchToolToolstripButton";
-            this.LaunchToolToolstripButton.Size = new System.Drawing.Size(66, 22);
+            this.LaunchToolToolstripButton.Size = new System.Drawing.Size(79, 24);
             this.LaunchToolToolstripButton.Text = "Launch";
             this.LaunchToolToolstripButton.Click += new System.EventHandler(this.LaunchTool_Click);
             // 
@@ -555,11 +564,11 @@ namespace mRemoteNG.UI.Window
             // 
             // ExternalToolsWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(827, 401);
             this.Controls.Add(this.ToolStripContainer);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "ExternalToolsWindow";
             this.TabText = "External Applications";
             this.Text = "External Tools";

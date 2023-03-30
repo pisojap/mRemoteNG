@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelWindowName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labelWindowName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(19, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "EaslyConnection";
+            this.labelWindowName.AutoSize = true;
+            this.labelWindowName.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.labelWindowName.Location = new System.Drawing.Point(19, 18);
+            this.labelWindowName.Name = "labelWindowName";
+            this.labelWindowName.Size = new System.Drawing.Size(248, 41);
+            this.labelWindowName.TabIndex = 0;
+            this.labelWindowName.Text = "EaslyConnection";
             // 
             // GridWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelWindowName);
             this.Name = "GridWindow";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelWindowName;
     }
 }

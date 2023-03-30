@@ -1,5 +1,7 @@
 ﻿using mRemoteNG.App;
 using mRemoteNG.Messages;
+using mRemoteNG.Messages.MessageWriters;
+using mRemoteNG.Messages.WriterDecorators;
 using mRemoteNG.UI.Controls.ConnectionTree;
 using mRemoteNG.UI.Window;
 using System;
@@ -22,7 +24,7 @@ namespace UI.Window
 
             foreach (var item in l)
             {
-                Runtime.MessageCollector.AddMessage(MessageClass.InformationMsg, $"-{item.Name}");
+                Runtime.MessageCollector.AddMessage(MessageClass.ErrorMsg, $"-{item.Name}");
             }
         }
     }

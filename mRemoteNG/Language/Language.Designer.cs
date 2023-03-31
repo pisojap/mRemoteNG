@@ -6595,5 +6595,78 @@ namespace mRemoteNG.Resources.Language {
                 return ResourceManager.GetString("GridView", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string Grid
+        {
+            get
+            {
+                return ResourceManager.GetString("Grid", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridName
+        {
+            get
+            {
+                return ResourceManager.GetString("GridName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("GridDescription", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridIcon
+        {
+            get
+            {
+                return ResourceManager.GetString("GridIcon", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridName
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridDescription
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridDescription", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridIcon
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridIcon", resourceCulture);
+            }
+        }
+
+
+
     }
 }

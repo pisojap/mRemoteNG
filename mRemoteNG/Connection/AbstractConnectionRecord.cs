@@ -21,6 +21,10 @@ namespace mRemoteNG.Connection
         private string _icon;
         private string _panel;
 
+        private string _gridName;
+        private string _gridDescription;
+        private string _gridIcon;
+
         private string _hostname;
         private string _ec2InstanceId = "";
         private string _ec2Region = "";
@@ -141,6 +145,37 @@ namespace mRemoteNG.Connection
         {
             get => GetPropertyValue("Panel", _panel);
             set => SetField(ref _panel, value, "Panel");
+        }
+
+        #endregion
+
+        #region Grid
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid)),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridName)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridName))]
+        public virtual string GridName
+        {
+            get => _gridName;
+            set => SetField(ref _gridName, value, "GridName");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid)),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridDescription)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridDescription))]
+        public virtual string GridDescription
+        {
+            get => _gridDescription;
+            set => SetField(ref _gridDescription, value, "GridDescription");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid)),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridIcon)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridIcon))]
+        public virtual string GridIcon
+        {
+            get => _gridIcon;
+            set => SetField(ref _gridIcon, value, "GridIcon");
         }
 
         #endregion

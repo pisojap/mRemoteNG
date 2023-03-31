@@ -2289,4 +2289,25 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
   <data name="GridView" xml:space="preserve">
     <value>GridView</value>
   </data>
+  <data name="Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="GridDescription" xml:space="preserve">
+    <value>GridDescription</value>
+  </data>
+  <data name="GridIcon" xml:space="preserve">
+    <value>GridIcon</value>
+  </data>
+  <data name="GridName" xml:space="preserve">
+    <value>GridName</value>
+  </data>
+  <data name="PropertyDescriptionGridDescription" xml:space="preserve">
+    <value>PropertyDescriptionGridDescription</value>
+  </data>
+  <data name="PropertyDescriptionGridIcon" xml:space="preserve">
+    <value>PropertyDescriptionGridIcon</value>
+  </data>
+  <data name="PropertyDescriptionGridName" xml:space="preserve">
+    <value>PropertyDescriptionGridName</value>
+  </data>
 </root>

@@ -573,6 +573,18 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     connectionInfo.Inheritance.UseRestrictedAdmin = xmlnode.GetAttributeAsBool("InheritUseRestrictedAdmin");
                     connectionInfo.UseRCG = xmlnode.GetAttributeAsBool("UseRCG");
                     connectionInfo.Inheritance.UseRCG = xmlnode.GetAttributeAsBool("InheritUseRCG");
+
+                    connectionInfo.GridName = xmlnode.GetAttributeAsString("GridName");
+                    connectionInfo.GridIcon = xmlnode.GetAttributeAsString("GridIcon");
+                    connectionInfo.GridDescription = xmlnode.GetAttributeAsString("GridDescription");
+                    connectionInfo.GridX = xmlnode.GetAttributeAsInt("GridX");
+                    connectionInfo.GridY = xmlnode.GetAttributeAsInt("GridY");
+                    connectionInfo.GridW = xmlnode.GetAttributeAsInt("GridW");
+                    connectionInfo.GridH = xmlnode.GetAttributeAsInt("GridH");
+                    connectionInfo.GridGroupName = xmlnode.GetAttributeAsString("GridGroupName");
+                    connectionInfo.GridGroupPicture = xmlnode.GetAttributeAsString("GridGroupPicture");
+                    connectionInfo.GridGroupX = xmlnode.GetAttributeAsInt("GridGroupX");
+                    connectionInfo.GridGroupY = xmlnode.GetAttributeAsInt("GridGroupY");
                 }
             }
             catch (Exception ex)

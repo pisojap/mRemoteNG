@@ -6665,6 +6665,166 @@ namespace mRemoteNG.Resources.Language {
                 return ResourceManager.GetString("PropertyDescriptionGridIcon", resourceCulture);
             }
         }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridX
+        {
+            get
+            {
+                return ResourceManager.GetString("GridX", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridX
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridX", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridY
+        {
+            get
+            {
+                return ResourceManager.GetString("GridY", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridY
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridY", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridW
+        {
+            get
+            {
+                return ResourceManager.GetString("GridW", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridW
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridW", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridH
+        {
+            get
+            {
+                return ResourceManager.GetString("GridH", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridH
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridH", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridGroupName
+        {
+            get
+            {
+                return ResourceManager.GetString("GridGroupName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridGroupName
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridGroupName", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridGroupPicture
+        {
+            get
+            {
+                return ResourceManager.GetString("GridGroupPicture", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridGroupPicture
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridGroupPicture", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridGroupX
+        {
+            get
+            {
+                return ResourceManager.GetString("GridGroupX", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridGroupX
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridGroupX", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridGroupY
+        {
+            get
+            {
+                return ResourceManager.GetString("GridGroupY", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridGroupY
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridGroupY", resourceCulture);
+            }
+        }
 
 
 

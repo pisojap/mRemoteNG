@@ -29,35 +29,58 @@
         private void InitializeComponent()
         {
             this.labelWindowName = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxGridSelection = new System.Windows.Forms.ComboBox();
+            this.labelSelectGrid = new System.Windows.Forms.Label();
+            this.panelConnections = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // labelWindowName
             // 
             this.labelWindowName.AutoSize = true;
-            this.labelWindowName.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.labelWindowName.Location = new System.Drawing.Point(19, 18);
+            this.labelWindowName.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.labelWindowName.Location = new System.Drawing.Point(205, 3);
             this.labelWindowName.Name = "labelWindowName";
-            this.labelWindowName.Size = new System.Drawing.Size(248, 41);
+            this.labelWindowName.Size = new System.Drawing.Size(60, 31);
             this.labelWindowName.TabIndex = 0;
-            this.labelWindowName.Text = "EaslyConnection";
+            this.labelWindowName.Text = "Grid";
             // 
-            // button1
+            // comboBoxGridSelection
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(30, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = false;
+            this.comboBoxGridSelection.FormattingEnabled = true;
+            this.comboBoxGridSelection.Location = new System.Drawing.Point(99, 6);
+            this.comboBoxGridSelection.Name = "comboBoxGridSelection";
+            this.comboBoxGridSelection.Size = new System.Drawing.Size(100, 28);
+            this.comboBoxGridSelection.TabIndex = 2;
+            this.comboBoxGridSelection.SelectedValueChanged += new System.EventHandler(this.comboBoxGridSelection_SelectedValueChanged);
+            // 
+            // labelSelectGrid
+            // 
+            this.labelSelectGrid.AutoSize = true;
+            this.labelSelectGrid.Location = new System.Drawing.Point(12, 9);
+            this.labelSelectGrid.Name = "labelSelectGrid";
+            this.labelSelectGrid.Size = new System.Drawing.Size(81, 20);
+            this.labelSelectGrid.TabIndex = 3;
+            this.labelSelectGrid.Text = "Select Grid";
+            // 
+            // panelConnections
+            // 
+            this.panelConnections.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelConnections.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelConnections.Location = new System.Drawing.Point(12, 40);
+            this.panelConnections.Name = "panelConnections";
+            this.panelConnections.Size = new System.Drawing.Size(758, 501);
+            this.panelConnections.TabIndex = 4;
             // 
             // GridWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.panelConnections);
+            this.Controls.Add(this.labelSelectGrid);
+            this.Controls.Add(this.comboBoxGridSelection);
             this.Controls.Add(this.labelWindowName);
             this.Name = "GridWindow";
             this.ResumeLayout(false);
@@ -68,6 +91,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelWindowName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxGridSelection;
+        private System.Windows.Forms.Label labelSelectGrid;
+        private System.Windows.Forms.Panel panelConnections;
     }
 }

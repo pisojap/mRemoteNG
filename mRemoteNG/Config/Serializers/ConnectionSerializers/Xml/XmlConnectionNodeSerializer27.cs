@@ -157,6 +157,18 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
             element.Add(new XAttribute("UserViaAPI", connectionInfo.UserViaAPI));
             element.Add(new XAttribute("EC2InstanceId", connectionInfo.EC2InstanceId));
             element.Add(new XAttribute("EC2Region", connectionInfo.EC2Region));
+
+            element.Add(new XAttribute("GridName", connectionInfo.GridName));
+            element.Add(new XAttribute("GridIcon", connectionInfo.GridIcon));
+            element.Add(new XAttribute("GridDescription", connectionInfo.GridDescription));
+            element.Add(new XAttribute("GridX", connectionInfo.GridX));
+            element.Add(new XAttribute("GridY", connectionInfo.GridY));
+            element.Add(new XAttribute("GridW", connectionInfo.GridW));
+            element.Add(new XAttribute("GridH", connectionInfo.GridH));
+            element.Add(new XAttribute("GridGroupName", connectionInfo.GridGroupName));
+            element.Add(new XAttribute("GridGroupPicture", connectionInfo.GridGroupPicture));
+            element.Add(new XAttribute("GridGroupX", connectionInfo.GridGroupX));
+            element.Add(new XAttribute("GridGroupY", connectionInfo.GridGroupY));
         }
 
         private void SetInheritanceAttributes(XContainer element, IInheritable connectionInfo)

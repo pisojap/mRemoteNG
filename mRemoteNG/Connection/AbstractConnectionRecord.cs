@@ -21,9 +21,17 @@ namespace mRemoteNG.Connection
         private string _icon;
         private string _panel;
 
-        private string _gridName;
-        private string _gridDescription;
-        private string _gridIcon;
+        private string _gridName = "";
+        private string _gridDescription = "";
+        private string _gridIcon = "";
+        private int _gridX = 0;
+        private int _gridY = 0;
+        private int _gridW = 10;
+        private int _gridH = 10;
+        private string _gridGroupName = "";
+        private string _gridGroupPicture = "";
+        private int _gridGroupX = 0;
+        private int _gridGroupY = 0;
 
         private string _hostname;
         private string _ec2InstanceId = "";
@@ -145,37 +153,6 @@ namespace mRemoteNG.Connection
         {
             get => GetPropertyValue("Panel", _panel);
             set => SetField(ref _panel, value, "Panel");
-        }
-
-        #endregion
-
-        #region Grid
-
-        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid)),
-         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridName)),
-         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridName))]
-        public virtual string GridName
-        {
-            get => _gridName;
-            set => SetField(ref _gridName, value, "GridName");
-        }
-
-        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid)),
-         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridDescription)),
-         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridDescription))]
-        public virtual string GridDescription
-        {
-            get => _gridDescription;
-            set => SetField(ref _gridDescription, value, "GridDescription");
-        }
-
-        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid)),
-         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridIcon)),
-         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridIcon))]
-        public virtual string GridIcon
-        {
-            get => _gridIcon;
-            set => SetField(ref _gridIcon, value, "GridIcon");
         }
 
         #endregion
@@ -984,6 +961,109 @@ namespace mRemoteNG.Connection
         {
             get => GetPropertyValue("VNCViewOnly", _vncViewOnly);
             set => SetField(ref _vncViewOnly, value, "VNCViewOnly");
+        }
+
+        #endregion
+
+        #region Grid
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridName)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridName))]
+        public virtual string GridName
+        {
+            get => _gridName;
+            set => SetField(ref _gridName, value, "GridName");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridDescription)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridDescription))]
+        public virtual string GridDescription
+        {
+            get => _gridDescription;
+            set => SetField(ref _gridDescription, value, "GridDescription");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridIcon)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridIcon))]
+        public virtual string GridIcon
+        {
+            get => _gridIcon;
+            set => SetField(ref _gridIcon, value, "GridIcon");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridX)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridX))]
+        public virtual int GridX
+        {
+            get => _gridX;
+            set => SetField(ref _gridX, value, "GridX");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridY)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridY))]
+        public virtual int GridY
+        {
+            get => _gridY;
+            set => SetField(ref _gridY, value, "GridY");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridW)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridW))]
+        public virtual int GridW
+        {
+            get => _gridW;
+            set => SetField(ref _gridW, value, "GridW");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridH)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridH))]
+        public virtual int GridH
+        {
+            get => _gridH;
+            set => SetField(ref _gridH, value, "GridH");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridGroupName)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridGroupName))]
+        public virtual string GridGroupName
+        {
+            get => _gridGroupName;
+            set => SetField(ref _gridGroupName, value, "GridGroupName");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridGroupPicture)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridGroupPicture))]
+        public virtual string GridGroupPicture
+        {
+            get => _gridGroupPicture;
+            set => SetField(ref _gridGroupPicture, value, "GridGroupPicture");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridGroupX)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridGroupX))]
+        public virtual int GridGroupX
+        {
+            get => _gridGroupX;
+            set => SetField(ref _gridGroupX, value, "GridGroupX");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridGroupY)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridGroupY))]
+        public virtual int GridGroupY
+        {
+            get => _gridGroupY;
+            set => SetField(ref _gridGroupY, value, "GridGroupY");
         }
 
         #endregion

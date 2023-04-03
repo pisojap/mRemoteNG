@@ -2293,21 +2293,69 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
     <value>Grid</value>
   </data>
   <data name="GridDescription" xml:space="preserve">
-    <value>GridDescription</value>
+    <value>Grid Description</value>
   </data>
   <data name="GridIcon" xml:space="preserve">
-    <value>GridIcon</value>
+    <value>Grid Icon</value>
   </data>
   <data name="GridName" xml:space="preserve">
-    <value>GridName</value>
+    <value>Grid Name</value>
   </data>
   <data name="PropertyDescriptionGridDescription" xml:space="preserve">
-    <value>PropertyDescriptionGridDescription</value>
+    <value>Grid shows connections from any directory in one canvas on positions according their X Y setiings </value>
   </data>
   <data name="PropertyDescriptionGridIcon" xml:space="preserve">
-    <value>PropertyDescriptionGridIcon</value>
+    <value>Grid icon for grid window</value>
   </data>
   <data name="PropertyDescriptionGridName" xml:space="preserve">
-    <value>PropertyDescriptionGridName</value>
+    <value>Grid name Getermines which grid is showing</value>
+  </data>
+  <data name="GridGroupName" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="GridGroupPicture" xml:space="preserve">
+    <value>Group Picture</value>
+  </data>
+  <data name="GridGroupX" xml:space="preserve">
+    <value>Group X</value>
+  </data>
+  <data name="GridGroupY" xml:space="preserve">
+    <value>Group Y</value>
+  </data>
+  <data name="GridX" xml:space="preserve">
+    <value>X position</value>
+  </data>
+  <data name="GridY" xml:space="preserve">
+    <value>Y position</value>
+  </data>
+  <data name="PropertyDescriptionGridGroupName" xml:space="preserve">
+    <value>If connection are coupled by some rule (like its on one place) Name of Group</value>
+  </data>
+  <data name="PropertyDescriptionGridGroupPicture" xml:space="preserve">
+    <value>Picture that will be placed to grid to represent group.</value>
+  </data>
+  <data name="PropertyDescriptionGridGroupX" xml:space="preserve">
+    <value>X position of group picture in grid </value>
+  </data>
+  <data name="PropertyDescriptionGridGroupY" xml:space="preserve">
+    <value>Y position of group picture in grid</value>
+  </data>
+  <data name="PropertyDescriptionGridX" xml:space="preserve">
+    <value>Position X of connection in pixels in Grid window</value>
+  </data>
+  <data name="PropertyDescriptionGridY" xml:space="preserve">
+    <value>Position Y of connection in pixels in Grid window</value>
+  </data>
+  <data name="GridH" xml:space="preserve">
+    <value>Grid height</value>
+  </data>
+  <data name="GridW" xml:space="preserve">
+    <value>Grid width</value>
+  </data>
+  <data name="PropertyDescriptionGridH" xml:space="preserve">
+    <value>Height of connection "square" icon</value>
+  </data>
+  <data name="PropertyDescriptionGridW" xml:space="preserve">
+    <value>Width of connection "square" icon</value>
   </data>
 </root>

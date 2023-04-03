@@ -78,6 +78,7 @@ namespace mRemoteNG.UI.Menu
             // 
             // mMenToolsGrid
             // 
+            _mMenToolsGridView.Image = Properties.Resources.Panel_16x;
             _mMenToolsGridView.Name = "mMenToolsGrid";
             _mMenToolsGridView.Size = new System.Drawing.Size(184, 22);
             _mMenToolsGridView.Text = Language.GridView;

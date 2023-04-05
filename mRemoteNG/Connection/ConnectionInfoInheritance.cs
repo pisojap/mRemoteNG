@@ -474,6 +474,87 @@ namespace mRemoteNG.Connection
 		TypeConverter(typeof(MiscTools.YesNoTypeConverter))]public bool VNCViewOnly {get; set;}
         #endregion
 
+        #region Grid
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridName)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridName)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridName { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridDescription)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridDescription)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridDescription { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridX)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridX)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridX { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridY)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridY)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridY { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridW)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridW)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridW { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridH)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridH)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridH { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridIcon)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridIcon)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridIcon { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridGroupName)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridGroupName)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridGroupName { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridGroupPicture)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridGroupPicture)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridGroupPicture { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridGroupX)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridGroupX)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridGroupX { get; set; }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridGroupY)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridGroupY)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridGroupY { get; set; }
+
+        #endregion
+
         [Browsable(false)]
         public ConnectionInfo Parent { get; private set; }
 

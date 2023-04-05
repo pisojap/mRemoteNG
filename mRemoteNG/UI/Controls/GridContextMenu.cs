@@ -12,13 +12,6 @@ namespace mRemoteNG.UI.Controls
     public class GridContextMenu : ContextMenuStrip
     {
         private ToolStripMenuItem _cMenTreeConnect;
-        private ToolStripMenuItem _cMenTreeConnectWithOptions;
-        private ToolStripMenuItem _cMenTreeConnectWithOptionsConnectToConsoleSession;
-        private ToolStripMenuItem _cMenTreeConnectWithOptionsNoCredentials;
-        private ToolStripMenuItem _cMenTreeConnectWithOptionsConnectInFullscreen;
-        private ToolStripMenuItem _cMenTreeConnectWithOptionsViewOnly;
-        private ToolStripMenuItem _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting;
-        private ToolStripMenuItem _cMenTreeConnectWithOptionsDontConnectToConsoleSession;
         private ToolStripMenuItem _cMenTreeToolsExternalApps;
         private readonly ConnectionInfo _connection;
 
@@ -36,13 +29,6 @@ namespace mRemoteNG.UI.Controls
         private void InitializeComponent()
         {
             _cMenTreeConnect = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptions = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptionsConnectToConsoleSession = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptionsDontConnectToConsoleSession = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptionsConnectInFullscreen = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptionsNoCredentials = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting = new ToolStripMenuItem();
-            _cMenTreeConnectWithOptionsViewOnly = new ToolStripMenuItem();
             _cMenTreeToolsExternalApps = new ToolStripMenuItem();
 
             Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular,
@@ -50,7 +36,6 @@ namespace mRemoteNG.UI.Controls
             Items.AddRange(new ToolStripItem[]
            {
                 _cMenTreeConnect,
-                _cMenTreeConnectWithOptions,
                 _cMenTreeToolsExternalApps,
            });
             Name = "cMenTreeGrid";
@@ -63,72 +48,6 @@ namespace mRemoteNG.UI.Controls
             _cMenTreeConnect.Size = new System.Drawing.Size(199, 22);
             _cMenTreeConnect.Text = "Connect";
             _cMenTreeConnect.Click += OnConnectClicked;
-
-            //_cMenConnectWithOptions
-            _cMenTreeConnectWithOptions.DropDownItems.AddRange(new ToolStripItem[]
-            {
-                _cMenTreeConnectWithOptionsConnectToConsoleSession,
-                _cMenTreeConnectWithOptionsDontConnectToConsoleSession,
-                _cMenTreeConnectWithOptionsConnectInFullscreen,
-                _cMenTreeConnectWithOptionsNoCredentials,
-                _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting,
-                _cMenTreeConnectWithOptionsViewOnly
-            });
-            _cMenTreeConnectWithOptions.Name = "_cMenTreeConnectWithOptions";
-            _cMenTreeConnectWithOptions.Size = new System.Drawing.Size(199, 22);
-            _cMenTreeConnectWithOptions.Text = "Connect (with options)";
-
-            //
-            // cMenTreeConnectWithOptionsConnectToConsoleSession
-            //
-            _cMenTreeConnectWithOptionsConnectToConsoleSession.Name =
-                "_cMenTreeConnectWithOptionsConnectToConsoleSession";
-            _cMenTreeConnectWithOptionsConnectToConsoleSession.Size = new System.Drawing.Size(245, 22);
-            _cMenTreeConnectWithOptionsConnectToConsoleSession.Text = "Connect to console session";
-            _cMenTreeConnectWithOptionsConnectToConsoleSession.Click += OnConnectToConsoleSessionClicked;
-            //
-            // cMenTreeConnectWithOptionsDontConnectToConsoleSession
-            //
-            _cMenTreeConnectWithOptionsDontConnectToConsoleSession.Name =
-                "_cMenTreeConnectWithOptionsDontConnectToConsoleSession";
-            _cMenTreeConnectWithOptionsDontConnectToConsoleSession.Size = new System.Drawing.Size(245, 22);
-            _cMenTreeConnectWithOptionsDontConnectToConsoleSession.Text = "Don\'t connect to console session";
-            _cMenTreeConnectWithOptionsDontConnectToConsoleSession.Visible = false;
-            _cMenTreeConnectWithOptionsDontConnectToConsoleSession.Click += OnDontConnectToConsoleSessionClicked;
-            //
-            // cMenTreeConnectWithOptionsConnectInFullscreen
-            //
-            _cMenTreeConnectWithOptionsConnectInFullscreen.Image = Properties.Resources.FullScreen_16x;
-            _cMenTreeConnectWithOptionsConnectInFullscreen.Name = "_cMenTreeConnectWithOptionsConnectInFullscreen";
-            _cMenTreeConnectWithOptionsConnectInFullscreen.Size = new System.Drawing.Size(245, 22);
-            _cMenTreeConnectWithOptionsConnectInFullscreen.Text = "Connect in fullscreen";
-            _cMenTreeConnectWithOptionsConnectInFullscreen.Click += OnConnectInFullscreenClicked;
-            //
-            // cMenTreeConnectWithOptionsNoCredentials
-            //
-            _cMenTreeConnectWithOptionsNoCredentials.Image = Properties.Resources.UniqueKeyError_16x;
-            _cMenTreeConnectWithOptionsNoCredentials.Name = "_cMenTreeConnectWithOptionsNoCredentials";
-            _cMenTreeConnectWithOptionsNoCredentials.Size = new System.Drawing.Size(245, 22);
-            _cMenTreeConnectWithOptionsNoCredentials.Text = "Connect without credentials";
-            _cMenTreeConnectWithOptionsNoCredentials.Click += OnConnectWithNoCredentialsClick;
-            //
-            // cMenTreeConnectWithOptionsChoosePanelBeforeConnecting
-            //
-            _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting.Image = Properties.Resources.Panel_16x;
-            _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting.Name =
-                "_cMenTreeConnectWithOptionsChoosePanelBeforeConnecting";
-            _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting.Size = new System.Drawing.Size(245, 22);
-            _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting.Text = "Choose panel before connecting";
-            _cMenTreeConnectWithOptionsChoosePanelBeforeConnecting.Click += OnChoosePanelBeforeConnectingClicked;
-            //
-            // cMenTreeConnectWithOptionsViewOnly
-            //
-            _cMenTreeConnectWithOptionsViewOnly.Image = Properties.Resources.Monitor_16x;
-            _cMenTreeConnectWithOptionsViewOnly.Name =
-                "_cMenTreeConnectWithOptionsViewOnly";
-            _cMenTreeConnectWithOptionsViewOnly.Size = new System.Drawing.Size(245, 22);
-            _cMenTreeConnectWithOptionsViewOnly.Text = Language.ConnectInViewOnlyMode;
-            _cMenTreeConnectWithOptionsViewOnly.Click += ConnectWithOptionsViewOnlyOnClick;
 
             //_cMenTreeToolsExternalApps
             _cMenTreeToolsExternalApps.Image = Properties.Resources.Console_16x;
@@ -203,39 +122,8 @@ namespace mRemoteNG.UI.Controls
 
         private void OnConnectClicked(object sender, EventArgs e)
         {
-            MessageBox.Show("Connect clicked.");
+            Runtime.ConnectionInitiator.OpenConnection(_connection, ConnectionInfo.Force.None);
         }
-
-        private void ConnectWithOptionsViewOnlyOnClick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnChoosePanelBeforeConnectingClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnConnectWithNoCredentialsClick(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnConnectInFullscreenClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnDontConnectToConsoleSessionClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnConnectToConsoleSessionClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
 
         #endregion
 

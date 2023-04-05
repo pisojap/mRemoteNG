@@ -317,6 +317,28 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     element.Add(new XAttribute("InheritUseRCG", inheritance.UseRCG.ToString().ToLowerInvariant()));
                 if (inheritance.UseRestrictedAdmin)
                     element.Add(new XAttribute("InheritUseRestrictedAdmin", inheritance.UseRestrictedAdmin.ToString().ToLowerInvariant()));
+                if (inheritance.GridName)
+                    element.Add(new XAttribute("InheritGridName", inheritance.GridName.ToString().ToLowerInvariant()));
+                if (inheritance.GridDescription)
+                    element.Add(new XAttribute("InheritGridDescription", inheritance.GridDescription.ToString().ToLowerInvariant()));
+                if (inheritance.GridIcon)
+                    element.Add(new XAttribute("InheritGridIcon", inheritance.GridIcon.ToString().ToLowerInvariant()));
+                if (inheritance.GridX)
+                    element.Add(new XAttribute("InheritGridX", inheritance.GridX.ToString().ToLowerInvariant()));
+                if (inheritance.GridY)
+                    element.Add(new XAttribute("InheritGridY", inheritance.GridY.ToString().ToLowerInvariant()));
+                if (inheritance.GridW)
+                    element.Add(new XAttribute("InheritGridW", inheritance.GridW.ToString().ToLowerInvariant()));
+                if (inheritance.GridH)
+                    element.Add(new XAttribute("InheritGridH", inheritance.GridH.ToString().ToLowerInvariant()));
+                if (inheritance.GridGroupName)
+                    element.Add(new XAttribute("InheritGridGroupName", inheritance.GridGroupName.ToString().ToLowerInvariant()));
+                if (inheritance.GridGroupPicture)
+                    element.Add(new XAttribute("InheritGridGroupPicture", inheritance.GridGroupPicture.ToString().ToLowerInvariant()));
+                if (inheritance.GridGroupX)
+                    element.Add(new XAttribute("InheritGridGroupX", inheritance.GridGroupX.ToString().ToLowerInvariant()));
+                if (inheritance.GridGroupY)
+                    element.Add(new XAttribute("InheritGridGroupY", inheritance.GridGroupY.ToString().ToLowerInvariant()));
             }
         }
     }

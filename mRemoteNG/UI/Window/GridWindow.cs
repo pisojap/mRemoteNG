@@ -1,9 +1,11 @@
 ﻿using mRemoteNG.App;
 using mRemoteNG.Connection;
+using mRemoteNG.Connection.Protocol;
 using mRemoteNG.Messages;
 using mRemoteNG.Messages.MessageWriters;
 using mRemoteNG.Messages.WriterDecorators;
 using mRemoteNG.Resources.Language;
+using mRemoteNG.Tools;
 using mRemoteNG.UI.Controls;
 using mRemoteNG.UI.Controls.ConnectionTree;
 using mRemoteNG.UI.Window;
@@ -25,12 +27,16 @@ namespace UI.Window
         private List<string> _gridList;
         private IEnumerable<ConnectionInfo> _groupListForSelectedGrid;
 
+        private ToolTip toolTip = new ToolTip();
+
         public GridWindow()
         {
             InitializeComponent();
             this.SetFormText($"Grid window");
+
             var childList = Runtime.ConnectionsService.ConnectionTreeModel.GetRecursiveChildList();
 
+            //get list of grids and populate combobox
             var c = from child in childList
                     where child.GridName != String.Empty
                     orderby child.GridName
@@ -49,31 +55,44 @@ namespace UI.Window
             comboBoxGridSelection.SelectedIndex = 0;
         }
 
+        private void GridWindow_Load(object sender, EventArgs e)
+        {
+            toolTip.AutoPopDelay = 5000;
+            toolTip.InitialDelay = 1000;
+            toolTip.ReshowDelay = 500;
+            toolTip.ShowAlways = true;
+        }
+
         private void comboBoxGridSelection_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ChangeGrid();
+        }
+
+        private void ChangeGrid()
         {
             labelWindowName.Text = $"{comboBoxGridSelection.Text}";
 
             _mConnectionInfoList = Runtime.ConnectionsService.ConnectionTreeModel.GetRecursiveChildList();
 
             _selectedGridConnectionInfo = from child in _mConnectionInfoList
-                         where child.GridName == comboBoxGridSelection.Text
-                         select child;
-                Runtime.MessageCollector.AddMessage(MessageClass.DebugMsg, $"Selected Grid-{_selectedGridConnectionInfo.First().GridName} connections-{_selectedGridConnectionInfo.Count()}");
+                                          where child.GridName == comboBoxGridSelection.Text
+                                          select child;
+            Runtime.MessageCollector.AddMessage(MessageClass.DebugMsg, $"Selected Grid-{_selectedGridConnectionInfo.First().GridName} connections-{_selectedGridConnectionInfo.Count()}");
 
 
             panelConnections.Controls.Clear();
 
             var g = (from c in _selectedGridConnectionInfo
-                         where c.GridGroupName != string.Empty
-                         group c by c.GridGroupName
+                     where c.GridGroupName != string.Empty
+                     group c by c.GridGroupName
                          into newGroup
-                         select newGroup);
+                     select newGroup);
             _groupListForSelectedGrid = g.SelectMany(group => group);
 
             foreach (var group in _groupListForSelectedGrid)
             {
                 // 
-                // buttons
+                // buttons for group Names
                 //
                 Button button = new Button();
                 button.Name = $"button{group.Name}";
@@ -92,13 +111,11 @@ namespace UI.Window
 
             foreach (var child in _selectedGridConnectionInfo)
             {
-                
-
                 // 
-                // buttons
+                // buttons for Connections
                 //
                 Button button = new Button();
-                button.Name = $"button{ child.Name}";
+                button.Name = $"button{child.Name}";
                 button.Text = child.Name;
                 button.Font = new Font("Arial", 8);
                 button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -109,12 +126,20 @@ namespace UI.Window
                 var cms = new GridContextMenu(child);
                 button.ContextMenuStrip = cms;
                 panelConnections.Controls.Add(button);
+
+                toolTip.SetToolTip(button, $"{child.GridDescription}{Environment.NewLine}" +
+                    $"{child.Hostname}{Environment.NewLine}" +
+                    $"{child.Protocol}{Environment.NewLine}" +
+                    $"{((child.Protocol == ProtocolType.IntApp) ? child.ExtApp + Environment.NewLine : "")}" +
+                    $"{child.Username}");
+
             }
         }
 
-        private void GridWindow_Click(object sender, EventArgs e)
+
+        private void buttonRefreshGrid_click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola hej");
+            ChangeGrid();
         }
     }
 }

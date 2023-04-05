@@ -1,4 +1,6 @@
-﻿namespace UI.Window
+﻿using mRemoteNG.Properties;
+
+namespace UI.Window
 {
     partial class GridWindow
     {
@@ -32,13 +34,14 @@
             this.comboBoxGridSelection = new System.Windows.Forms.ComboBox();
             this.labelSelectGrid = new System.Windows.Forms.Label();
             this.panelConnections = new System.Windows.Forms.Panel();
+            this.buttonRefreshGrid = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelWindowName
             // 
             this.labelWindowName.AutoSize = true;
             this.labelWindowName.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.labelWindowName.Location = new System.Drawing.Point(205, 3);
+            this.labelWindowName.Location = new System.Drawing.Point(263, 3);
             this.labelWindowName.Name = "labelWindowName";
             this.labelWindowName.Size = new System.Drawing.Size(60, 31);
             this.labelWindowName.TabIndex = 0;
@@ -49,7 +52,7 @@
             this.comboBoxGridSelection.FormattingEnabled = true;
             this.comboBoxGridSelection.Location = new System.Drawing.Point(99, 6);
             this.comboBoxGridSelection.Name = "comboBoxGridSelection";
-            this.comboBoxGridSelection.Size = new System.Drawing.Size(100, 28);
+            this.comboBoxGridSelection.Size = new System.Drawing.Size(125, 28);
             this.comboBoxGridSelection.TabIndex = 2;
             this.comboBoxGridSelection.SelectedValueChanged += new System.EventHandler(this.comboBoxGridSelection_SelectedValueChanged);
             // 
@@ -73,16 +76,28 @@
             this.panelConnections.Size = new System.Drawing.Size(758, 501);
             this.panelConnections.TabIndex = 4;
             // 
+            // buttonRefreshGrid
+            // 
+            this.buttonRefreshGrid.Image = Resources.Refresh_16x;
+            this.buttonRefreshGrid.Location = new System.Drawing.Point(230, 6);
+            this.buttonRefreshGrid.Name = "buttonRefreshGrid";
+            this.buttonRefreshGrid.Size = new System.Drawing.Size(30, 28);
+            this.buttonRefreshGrid.TabIndex = 5;
+            this.buttonRefreshGrid.UseVisualStyleBackColor = true;
+            this.buttonRefreshGrid.Click += new System.EventHandler(this.buttonRefreshGrid_click);
+            // 
             // GridWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.Controls.Add(this.buttonRefreshGrid);
             this.Controls.Add(this.panelConnections);
             this.Controls.Add(this.labelSelectGrid);
             this.Controls.Add(this.comboBoxGridSelection);
             this.Controls.Add(this.labelWindowName);
             this.Name = "GridWindow";
+            this.Load += new System.EventHandler(this.GridWindow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +109,6 @@
         private System.Windows.Forms.ComboBox comboBoxGridSelection;
         private System.Windows.Forms.Label labelSelectGrid;
         private System.Windows.Forms.Panel panelConnections;
+        private System.Windows.Forms.Button buttonRefreshGrid;
     }
 }

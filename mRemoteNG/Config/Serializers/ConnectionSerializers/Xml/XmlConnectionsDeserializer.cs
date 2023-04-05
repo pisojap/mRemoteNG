@@ -585,6 +585,18 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     connectionInfo.GridGroupPicture = xmlnode.GetAttributeAsString("GridGroupPicture");
                     connectionInfo.GridGroupX = xmlnode.GetAttributeAsInt("GridGroupX");
                     connectionInfo.GridGroupY = xmlnode.GetAttributeAsInt("GridGroupY");
+
+                    connectionInfo.Inheritance.GridName = xmlnode.GetAttributeAsBool("InheritGridName");
+                    connectionInfo.Inheritance.GridDescription = xmlnode.GetAttributeAsBool("InheritGridDescription");
+                    connectionInfo.Inheritance.GridIcon = xmlnode.GetAttributeAsBool("InheritGridIcon");
+                    connectionInfo.Inheritance.GridX = xmlnode.GetAttributeAsBool("InheritGridX");
+                    connectionInfo.Inheritance.GridY = xmlnode.GetAttributeAsBool("InheritGridY");
+                    connectionInfo.Inheritance.GridW = xmlnode.GetAttributeAsBool("InheritGridW");
+                    connectionInfo.Inheritance.GridH = xmlnode.GetAttributeAsBool("InheritGridH");
+                    connectionInfo.Inheritance.GridGroupName = xmlnode.GetAttributeAsBool("InheritGridGroupName");
+                    connectionInfo.Inheritance.GridGroupPicture = xmlnode.GetAttributeAsBool("InheritGridGroupPicture");
+                    connectionInfo.Inheritance.GridGroupX = xmlnode.GetAttributeAsBool("InheritGridGroupX");
+                    connectionInfo.Inheritance.GridGroupY = xmlnode.GetAttributeAsBool("InheritGridGroupY");
                 }
             }
             catch (Exception ex)

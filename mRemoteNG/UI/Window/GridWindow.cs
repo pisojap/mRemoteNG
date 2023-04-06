@@ -106,7 +106,7 @@ namespace UI.Window
                 button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 button.UseVisualStyleBackColor = false;
                 panelConnections.Controls.Add(button);
-
+                button.BringToFront();
             }
 
             foreach (var child in _selectedGridConnectionInfo)
@@ -126,6 +126,12 @@ namespace UI.Window
                 var cms = new GridContextMenu(child);
                 button.ContextMenuStrip = cms;
                 panelConnections.Controls.Add(button);
+
+                if (child.GridZ == 0)
+                {
+                    button.BringToFront();
+                    button.BackColor = Color.Azure;
+                }
 
                 toolTip.SetToolTip(button, $"{child.GridDescription}{Environment.NewLine}" +
                     $"{child.Hostname}{Environment.NewLine}" +

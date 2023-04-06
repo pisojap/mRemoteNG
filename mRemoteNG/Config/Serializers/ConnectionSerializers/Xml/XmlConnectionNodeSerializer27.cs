@@ -169,6 +169,8 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
             element.Add(new XAttribute("GridGroupPicture", connectionInfo.GridGroupPicture));
             element.Add(new XAttribute("GridGroupX", connectionInfo.GridGroupX));
             element.Add(new XAttribute("GridGroupY", connectionInfo.GridGroupY));
+            element.Add(new XAttribute("GridZ", connectionInfo.GridZ));
+
         }
 
         private void SetInheritanceAttributes(XContainer element, IInheritable connectionInfo)
@@ -339,6 +341,8 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     element.Add(new XAttribute("InheritGridGroupX", inheritance.GridGroupX.ToString().ToLowerInvariant()));
                 if (inheritance.GridGroupY)
                     element.Add(new XAttribute("InheritGridGroupY", inheritance.GridGroupY.ToString().ToLowerInvariant()));
+                if (inheritance.GridZ)
+                    element.Add(new XAttribute("InheritGridZ", inheritance.GridZ.ToString().ToLowerInvariant()));
             }
         }
     }

@@ -585,6 +585,7 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     connectionInfo.GridGroupPicture = xmlnode.GetAttributeAsString("GridGroupPicture");
                     connectionInfo.GridGroupX = xmlnode.GetAttributeAsInt("GridGroupX");
                     connectionInfo.GridGroupY = xmlnode.GetAttributeAsInt("GridGroupY");
+                    connectionInfo.GridZ = xmlnode.GetAttributeAsInt("GridZ");
 
                     connectionInfo.Inheritance.GridName = xmlnode.GetAttributeAsBool("InheritGridName");
                     connectionInfo.Inheritance.GridDescription = xmlnode.GetAttributeAsBool("InheritGridDescription");
@@ -597,6 +598,7 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     connectionInfo.Inheritance.GridGroupPicture = xmlnode.GetAttributeAsBool("InheritGridGroupPicture");
                     connectionInfo.Inheritance.GridGroupX = xmlnode.GetAttributeAsBool("InheritGridGroupX");
                     connectionInfo.Inheritance.GridGroupY = xmlnode.GetAttributeAsBool("InheritGridGroupY");
+                    connectionInfo.Inheritance.GridZ = xmlnode.GetAttributeAsBool("InheritGridZ");
                 }
             }
             catch (Exception ex)

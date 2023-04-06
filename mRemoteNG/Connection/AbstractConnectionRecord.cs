@@ -26,6 +26,7 @@ namespace mRemoteNG.Connection
         private string _gridIcon = "";
         private int _gridX = 0;
         private int _gridY = 0;
+        private int _gridZ = 1;
         private int _gridW = 10;
         private int _gridH = 10;
         private string _gridGroupName = "";
@@ -1012,6 +1013,15 @@ namespace mRemoteNG.Connection
             set => SetField(ref _gridY, value, "GridY");
         }
 
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridZ)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridZ))]
+        public virtual int GridZ
+        {
+            get => _gridZ;
+            set => SetField(ref _gridZ, value, "GridZ");
+        }
+
         [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),
          LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridW)),
          LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridW))]
@@ -1065,6 +1075,7 @@ namespace mRemoteNG.Connection
             get => _gridGroupY;
             set => SetField(ref _gridGroupY, value, "GridGroupY");
         }
+
 
         #endregion
 

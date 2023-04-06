@@ -2358,4 +2358,10 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
   <data name="PropertyDescriptionGridW" xml:space="preserve">
     <value>Width of connection "square" icon</value>
   </data>
+  <data name="GridZ" xml:space="preserve">
+    <value>Z position</value>
+  </data>
+  <data name="PropertyDescriptionGridZ" xml:space="preserve">
+    <value>Position Z of connection in Grid window 0-top &gt;0-back</value>
+  </data>
 </root>

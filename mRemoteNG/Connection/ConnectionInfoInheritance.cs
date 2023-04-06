@@ -553,6 +553,13 @@ namespace mRemoteNG.Connection
         [Browsable(true)]
         public bool GridGroupY { get; set; }
 
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 10),
+         LocalizedAttributes.LocalizedDisplayNameInherit(nameof(Language.GridZ)),
+         LocalizedAttributes.LocalizedDescriptionInherit(nameof(Language.PropertyDescriptionGridZ)),
+         TypeConverter(typeof(MiscTools.YesNoTypeConverter))]
+        [Browsable(true)]
+        public bool GridZ { get; set; }
+
         #endregion
 
         [Browsable(false)]

@@ -2329,7 +2329,7 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
     <value>Y position</value>
   </data>
   <data name="PropertyDescriptionGridGroupName" xml:space="preserve">
-    <value>If connection are coupled by some rule (like its on one place) Name of Group</value>
+    <value>If connection are coupled by some rule (like its on one place) Name of that couple or Group</value>
   </data>
   <data name="PropertyDescriptionGridGroupPicture" xml:space="preserve">
     <value>Picture that will be placed to grid to represent group.</value>
@@ -2347,10 +2347,10 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
     <value>Position Y of connection in pixels in Grid window</value>
   </data>
   <data name="GridH" xml:space="preserve">
-    <value>Grid height</value>
+    <value>Height</value>
   </data>
   <data name="GridW" xml:space="preserve">
-    <value>Grid width</value>
+    <value>Width</value>
   </data>
   <data name="PropertyDescriptionGridH" xml:space="preserve">
     <value>Height of connection "square" icon</value>
@@ -2363,5 +2363,11 @@ Nightly Channel includes Alphas, Betas &amp; Release Candidates.</value>
   </data>
   <data name="PropertyDescriptionGridZ" xml:space="preserve">
     <value>Position Z of connection in Grid window 0-top &gt;0-back</value>
+  </data>
+  <data name="GridColor" xml:space="preserve">
+    <value>Color of connection in grid</value>
+  </data>
+  <data name="PropertyDescriptionGridColor" xml:space="preserve">
+    <value>Select value for initial color of connection button.</value>
   </data>
 </root>

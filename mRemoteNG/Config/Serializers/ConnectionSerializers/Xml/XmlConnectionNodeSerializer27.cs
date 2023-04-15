@@ -170,6 +170,8 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
             element.Add(new XAttribute("GridGroupX", connectionInfo.GridGroupX));
             element.Add(new XAttribute("GridGroupY", connectionInfo.GridGroupY));
             element.Add(new XAttribute("GridZ", connectionInfo.GridZ));
+            element.Add(new XAttribute("GridColor", connectionInfo.GridColor.Name));
+
 
         }
 

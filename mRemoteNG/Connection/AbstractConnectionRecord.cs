@@ -8,7 +8,7 @@ using mRemoteNG.Properties;
 using mRemoteNG.Tools;
 using mRemoteNG.Tools.Attributes;
 using mRemoteNG.Resources.Language;
-
+using System.Drawing;
 
 namespace mRemoteNG.Connection
 {
@@ -33,6 +33,7 @@ namespace mRemoteNG.Connection
         private string _gridGroupPicture = "";
         private int _gridGroupX = 0;
         private int _gridGroupY = 0;
+        private Color _gridColor = Color.Gray;
 
         private string _hostname;
         private string _ec2InstanceId = "";
@@ -1038,6 +1039,15 @@ namespace mRemoteNG.Connection
         {
             get => _gridH;
             set => SetField(ref _gridH, value, "GridH");
+        }
+
+        [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid), 8),
+         LocalizedAttributes.LocalizedDisplayName(nameof(Language.GridColor)),
+         LocalizedAttributes.LocalizedDescription(nameof(Language.PropertyDescriptionGridColor))]
+        public virtual Color GridColor
+        {
+            get => _gridColor;
+            set => SetField(ref _gridColor, value, nameof(Color));
         }
 
         [LocalizedAttributes.LocalizedCategory(nameof(Language.Grid),8),

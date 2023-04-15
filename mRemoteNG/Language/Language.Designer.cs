@@ -6846,6 +6846,26 @@ namespace mRemoteNG.Resources.Language {
             }
         }
 
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string GridColor
+        {
+            get
+            {
+                return ResourceManager.GetString("GridColor", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to ShowForUser.
+        /// </summary>
+        internal static string PropertyDescriptionGridColor
+        {
+            get
+            {
+                return ResourceManager.GetString("PropertyDescriptionGridColor", resourceCulture);
+            }
+        }
 
 
     }

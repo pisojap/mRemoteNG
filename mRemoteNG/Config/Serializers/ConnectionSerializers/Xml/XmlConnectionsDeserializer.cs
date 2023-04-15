@@ -18,6 +18,7 @@ using mRemoteNG.Tree.Root;
 using mRemoteNG.UI.Forms;
 using mRemoteNG.UI.TaskDialog;
 using mRemoteNG.Resources.Language;
+using System.Drawing;
 
 namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
 {
@@ -586,6 +587,7 @@ namespace mRemoteNG.Config.Serializers.ConnectionSerializers.Xml
                     connectionInfo.GridGroupX = xmlnode.GetAttributeAsInt("GridGroupX");
                     connectionInfo.GridGroupY = xmlnode.GetAttributeAsInt("GridGroupY");
                     connectionInfo.GridZ = xmlnode.GetAttributeAsInt("GridZ");
+                    connectionInfo.GridColor = ColorTranslator.FromHtml(xmlnode.GetAttributeAsString("GridColor"));
 
                     connectionInfo.Inheritance.GridName = xmlnode.GetAttributeAsBool("InheritGridName");
                     connectionInfo.Inheritance.GridDescription = xmlnode.GetAttributeAsBool("InheritGridDescription");

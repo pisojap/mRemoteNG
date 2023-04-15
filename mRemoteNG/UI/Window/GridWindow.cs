@@ -126,11 +126,11 @@ namespace UI.Window
                 var cms = new GridContextMenu(child);
                 button.ContextMenuStrip = cms;
                 panelConnections.Controls.Add(button);
+                button.BackColor = child.GridColor;
 
                 if (child.GridZ == 0)
                 {
                     button.BringToFront();
-                    button.BackColor = Color.Azure;
                 }
 
                 toolTip.SetToolTip(button, $"{child.GridDescription}{Environment.NewLine}" +

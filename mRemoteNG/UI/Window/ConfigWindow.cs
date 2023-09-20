@@ -37,6 +37,7 @@ namespace mRemoteNG.UI.Window
         private ToolStripSeparator _toolStripSeparator1;
         private ConnectionInfoPropertyGrid _pGrid;
         private ThemeManager _themeManager;
+        internal float fontsize = 10.0F;
 
         private ConnectionInfo _selectedTreeNode;
 
@@ -90,7 +91,7 @@ namespace mRemoteNG.UI.Window
                           | AnchorStyles.Right;
             _pGrid.BrowsableProperties = null;
             _pGrid.ContextMenuStrip = PropertyGridContextMenu;
-            _pGrid.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Convert.ToByte(0));
+            _pGrid.Font = new Font("Segoe UI", fontsize, FontStyle.Regular, GraphicsUnit.Point, Convert.ToByte(0));
             _pGrid.HiddenAttributes = null;
             _pGrid.HiddenProperties = null;
             _pGrid.Location = new Point(0, 0);

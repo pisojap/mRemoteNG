@@ -1,4 +1,4 @@
-using mRemoteNG.Themes;
+﻿using mRemoteNG.Themes;
 using WeifenLuo.WinFormsUI.Docking;
 
 // ReSharper disable UnusedAutoPropertyAccessor.Global
@@ -68,7 +68,7 @@ namespace mRemoteNG.UI.Window
             // BaseWindow
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular,
+            this.Font = new System.Drawing.Font("Segoe UI", 18.25F, System.Drawing.FontStyle.Regular,
                                                 System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "BaseWindow";
             this.ResumeLayout(false);

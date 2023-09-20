@@ -64,7 +64,7 @@
   <data name="NewToolMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAGBJREFUOE/dkTEKwDAMA/2oDH1jH+zVrU0CiSuBCx1KBDdJXCAWFDMTVbVEbwsZ
+        wQAADsEBuJFr7QAAAGBJREFUOE/dkTEKwDAMA/2oDH1jH+zVrU0CiSuBCx1KBDdJXCAWFDMTVbVEbwsZ
         guNswe4CHyOQAO1iyEgCyPLSW74TMOYhwwWMLECb+ERGTYDi57nLh6Cc/wgSvZ0jcgGH8OxYn96gCgAA
         AABJRU5ErkJggg==
 </value>
@@ -72,7 +72,7 @@
   <data name="DeleteToolMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsIAAA7CARUoSoAAAABESURBVDhPrdAhEgAxDMPAvC3/
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsEAAA7BAbiRa+0AAABESURBVDhPrdAhEgAxDMPAvC3/
         f0+ob6ZYoLoULBEwcCVZwWhgNDAaGA2MRs1MNs5Ad//ybmADjzEwGhgNjAZGA+O91AcUafsPqg8ojAAA
         AABJRU5ErkJggg==
 </value>
@@ -80,7 +80,7 @@
   <data name="LaunchToolMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAAKNJREFUOE9jQAbfvn07/+XLFwMol3QANOA/EL///v17AlSINAAyIGZexP97L+/9
+        wAAADsABataJCQAAAKNJREFUOE9jQAbfvn07/+XLFwMol3QANOA/EL///v17AlSINAAyIGZexP97L+/9
         //r16/z3798LQKWIAyADLLpM/rtMdPi/+8pOkGtI8xLMABju3tlJmpfQDQBhkryEzQAQJtpLuAyAYYJe
         ImRA/eZa8gwAeWH9ubXkeQEUiJceXSIvEEFOfv7mOenRSLST0QHIAJKcjA5ABgAxRZmJxOzMwAAAu3wo
         luQHKWcAAAAASUVORK5CYII=
@@ -108,8 +108,8 @@
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACjSURBVDhPY0AG3759O//lyxcDKJd0ADTgPxC///79ewJU
         iDQAMiBmXsT/ey/v/f/69ev89+/fC0CliAMgAyy6TP67THT4v/vKTpBrSPMSzAAY7t7ZSZqX0A0AYZK8
-        hM0AECbaS7gMgGGCXiJkQP3mWvIMAHlh/bm15HkBFIiXHl0iLxBBTn7+6jnp0Ui0k9EByACSnIwOQAYA
-        MUWZicTszMAAALk2KJRPk6aoAAAAAElFTkSuQmCC
+        hM0AECbaS7gMgGGCXiJkQP3mWvIMAHlh/bm15HkBFIiXHl0iLxBBTn7+8jnp0Ui0k9EByACSnIwOQAYA
+        MUWZicTszMAAALgTKJOpgIrYAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="vsToolStripExtender.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

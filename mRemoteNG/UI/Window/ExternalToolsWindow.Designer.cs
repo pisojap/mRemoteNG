@@ -36,6 +36,7 @@ namespace mRemoteNG.UI.Window
 	    internal Controls.MrngTextBox WorkingDirTextBox;
 	    internal MrngButton BrowseWorkingDir;
 	    internal MrngCheckBox RunElevatedCheckBox;
+        internal float fontsize = 10.0F;
 
         private void InitializeComponent()
 		{
@@ -116,7 +117,7 @@ namespace mRemoteNG.UI.Window
             this.ShowOnToolbarColumnHeader});
             this.ToolsListObjView.ContextMenuStrip = this.ToolsContextMenuStrip;
             this.ToolsListObjView.DecorateLines = true;
-            this.ToolsListObjView.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ToolsListObjView.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ToolsListObjView.FullRowSelect = true;
             this.ToolsListObjView.GridLines = true;
             this.ToolsListObjView.Location = new System.Drawing.Point(0, 0);
@@ -312,7 +313,7 @@ namespace mRemoteNG.UI.Window
             this.ShowOnToolbarCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.ShowOnToolbarCheckBox.AutoSize = true;
             this.ShowOnToolbarCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ShowOnToolbarCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ShowOnToolbarCheckBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ShowOnToolbarCheckBox.Location = new System.Drawing.Point(275, 133);
             this.ShowOnToolbarCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.ShowOnToolbarCheckBox.Name = "ShowOnToolbarCheckBox";
@@ -327,7 +328,7 @@ namespace mRemoteNG.UI.Window
             this.WorkingDirTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.WorkingDirTextBox, 3);
             this.WorkingDirTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WorkingDirTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WorkingDirTextBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WorkingDirTextBox.Location = new System.Drawing.Point(129, 80);
             this.WorkingDirTextBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.WorkingDirTextBox.Name = "WorkingDirTextBox";
@@ -340,7 +341,7 @@ namespace mRemoteNG.UI.Window
             this.DisplayNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.DisplayNameTextBox, 3);
             this.DisplayNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DisplayNameTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DisplayNameTextBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.DisplayNameTextBox.Location = new System.Drawing.Point(129, 2);
             this.DisplayNameTextBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.DisplayNameTextBox.Name = "DisplayNameTextBox";
@@ -353,7 +354,7 @@ namespace mRemoteNG.UI.Window
             this.FilenameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.FilenameTextBox, 3);
             this.FilenameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FilenameTextBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FilenameTextBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FilenameTextBox.Location = new System.Drawing.Point(129, 28);
             this.FilenameTextBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.FilenameTextBox.Name = "FilenameTextBox";
@@ -366,7 +367,7 @@ namespace mRemoteNG.UI.Window
             this.ArgumentsCheckBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel1.SetColumnSpan(this.ArgumentsCheckBox, 3);
             this.ArgumentsCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ArgumentsCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ArgumentsCheckBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ArgumentsCheckBox.Location = new System.Drawing.Point(129, 54);
             this.ArgumentsCheckBox.Margin = new System.Windows.Forms.Padding(0, 2, 3, 2);
             this.ArgumentsCheckBox.Name = "ArgumentsCheckBox";
@@ -390,7 +391,7 @@ namespace mRemoteNG.UI.Window
             this.RunElevatedCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.RunElevatedCheckBox.AutoSize = true;
             this.RunElevatedCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RunElevatedCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RunElevatedCheckBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.RunElevatedCheckBox.Location = new System.Drawing.Point(132, 133);
             this.RunElevatedCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.RunElevatedCheckBox.Name = "RunElevatedCheckBox";
@@ -416,7 +417,7 @@ namespace mRemoteNG.UI.Window
             this.TryToIntegrateCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.TryToIntegrateCheckBox.AutoSize = true;
             this.TryToIntegrateCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TryToIntegrateCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TryToIntegrateCheckBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TryToIntegrateCheckBox.Location = new System.Drawing.Point(275, 107);
             this.TryToIntegrateCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.TryToIntegrateCheckBox.Name = "TryToIntegrateCheckBox";
@@ -453,7 +454,7 @@ namespace mRemoteNG.UI.Window
             this.WaitForExitCheckBox._mice = mRemoteNG.UI.Controls.MrngCheckBox.MouseState.OUT;
             this.WaitForExitCheckBox.AutoSize = true;
             this.WaitForExitCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WaitForExitCheckBox.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.WaitForExitCheckBox.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.WaitForExitCheckBox.Location = new System.Drawing.Point(132, 107);
             this.WaitForExitCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
             this.WaitForExitCheckBox.Name = "WaitForExitCheckBox";
@@ -568,7 +569,7 @@ namespace mRemoteNG.UI.Window
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(827, 401);
             this.Controls.Add(this.ToolStripContainer);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "ExternalToolsWindow";
             this.TabText = "External Applications";
             this.Text = "External Tools";

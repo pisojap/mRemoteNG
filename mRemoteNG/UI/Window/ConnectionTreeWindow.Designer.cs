@@ -14,7 +14,10 @@ namespace mRemoteNG.UI.Window
 		internal System.Windows.Forms.ToolStripMenuItem mMenAddConnection;
 		internal System.Windows.Forms.ToolStripMenuItem mMenAddFolder;
 		public System.Windows.Forms.TreeView tvConnections;
-		private void InitializeComponent()
+        internal float fontsize = 10.0F;
+
+
+        private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
             mRemoteNG.Tree.ConnectionTreeModel connectionTreeModel2 = new mRemoteNG.Tree.ConnectionTreeModel();
@@ -49,7 +52,7 @@ namespace mRemoteNG.UI.Window
             this.ConnectionTree.Dock = System.Windows.Forms.DockStyle.Fill;
             treeNodeCompositeClickHandler3.ClickHandlers = new ITreeNodeClickHandler<mRemoteNG.Connection.ConnectionInfo>[0];
             this.ConnectionTree.DoubleClickHandler = treeNodeCompositeClickHandler3;
-            this.ConnectionTree.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConnectionTree.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConnectionTree.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.ConnectionTree.HideSelection = false;
             this.ConnectionTree.IsSimpleDragSource = true;

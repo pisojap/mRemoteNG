@@ -194,7 +194,7 @@ namespace mRemoteNG.UI.Window
             //
             ClientSize = new Size(226, 530);
             Controls.Add(_pGrid);
-            Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, Convert.ToByte(0));
+            Font = new Font("Segoe UI", fontsize, FontStyle.Regular, GraphicsUnit.Point, Convert.ToByte(0));
             HideOnClose = true;
             Name = "ConfigWindow";
             TabText = @"Config";

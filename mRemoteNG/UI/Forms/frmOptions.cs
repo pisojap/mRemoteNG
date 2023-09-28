@@ -14,6 +14,7 @@ namespace mRemoteNG.UI.Forms
     public partial class FrmOptions : Form
     {
         private Dictionary<string, OptionsPage> _pages;
+        private float fontsize = 20.0F;
         private readonly string _pageName;
         private readonly DisplayProperties _display = new DisplayProperties();
 

@@ -54,6 +54,7 @@
     <None Remove="Resources\contii.gif" />
     <None Remove="Resources\contii.png" />
     <None Remove="UI\Font\HandelGotDBol.ttf" />
+    <None Remove="vncviewer.exe" />
   </ItemGroup>
 
   <ItemGroup>
@@ -433,6 +434,9 @@
     <Content Include="Resources\contii.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="vncviewer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Resource Include="UI\Font\HandelGotDBol.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

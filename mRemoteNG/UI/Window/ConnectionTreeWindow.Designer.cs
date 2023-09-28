@@ -78,7 +78,7 @@ namespace mRemoteNG.UI.Window
             // 
             // msMain
             // 
-            this.msMain.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msMain.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mMenAddConnection,
             this.mMenAddFolder,
@@ -162,7 +162,7 @@ namespace mRemoteNG.UI.Window
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtSearch.Location = new System.Drawing.Point(26, 3);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(0);
@@ -198,7 +198,7 @@ namespace mRemoteNG.UI.Window
             this.Controls.Add(this.ConnectionTree);
             this.Controls.Add(this.searchBoxLayoutPanel);
             this.Controls.Add(this.msMain);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI", fontsize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HideOnClose = true;
             this.Name = "ConnectionTreeWindow";
             this.TabText = "Connections";

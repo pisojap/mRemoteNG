@@ -1,6 +1,7 @@
 ﻿
 using mRemoteNG.Themes;
 using mRemoteNG.UI.Controls;
+using System.Drawing;
 
 namespace mRemoteNG.UI.Window
 {
@@ -29,8 +30,9 @@ namespace mRemoteNG.UI.Window
 		internal Controls.MrngNumericUpDown portStart;
 		internal MrngButton btnImport;
 		internal MrngIpTextBox ipStart;
-				
-		private void InitializeComponent()
+        private float fontsize = 18.0F;
+
+        private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PortScanWindow));
@@ -230,7 +232,7 @@ namespace mRemoteNG.UI.Window
             "VNC"});
             this.cbProtocol.Location = new System.Drawing.Point(3, 27);
             this.cbProtocol.Name = "cbProtocol";
-            this.cbProtocol.Size = new System.Drawing.Size(144, 27);
+            this.cbProtocol.Size = new System.Drawing.Size(144, 28);
             this.cbProtocol.TabIndex = 7;
             // 
             // lblOnlyImport
@@ -325,7 +327,7 @@ namespace mRemoteNG.UI.Window
             0,
             0});
             this.numericSelectorTimeout.Name = "numericSelectorTimeout";
-            this.numericSelectorTimeout.Size = new System.Drawing.Size(67, 26);
+            this.numericSelectorTimeout.Size = new System.Drawing.Size(67, 27);
             this.numericSelectorTimeout.TabIndex = 5;
             this.numericSelectorTimeout.Value = new decimal(new int[] {
             5,
@@ -339,7 +341,7 @@ namespace mRemoteNG.UI.Window
             this.lblTimeout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTimeout.Location = new System.Drawing.Point(3, 96);
             this.lblTimeout.Name = "lblTimeout";
-            this.lblTimeout.Size = new System.Drawing.Size(124, 33);
+            this.lblTimeout.Size = new System.Drawing.Size(124, 24);
             this.lblTimeout.TabIndex = 16;
             this.lblTimeout.Text = "Timeout [seconds]";
             this.lblTimeout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,7 +356,7 @@ namespace mRemoteNG.UI.Window
             0,
             0});
             this.portEnd.Name = "portEnd";
-            this.portEnd.Size = new System.Drawing.Size(67, 26);
+            this.portEnd.Size = new System.Drawing.Size(67, 27);
             this.portEnd.TabIndex = 4;
             this.portEnd.Value = new decimal(new int[] {
             65535,
@@ -373,7 +375,7 @@ namespace mRemoteNG.UI.Window
             0,
             0});
             this.portStart.Name = "portStart";
-            this.portStart.Size = new System.Drawing.Size(67, 26);
+            this.portStart.Size = new System.Drawing.Size(67, 27);
             this.portStart.TabIndex = 3;
             this.portStart.Enter += new System.EventHandler(this.portStart_Enter);
             // 
@@ -404,6 +406,7 @@ namespace mRemoteNG.UI.Window
             this.pnlIp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.pnlIp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.pnlIp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.pnlIp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.pnlIp.Size = new System.Drawing.Size(878, 129);
             this.pnlIp.TabIndex = 103;
             // 
@@ -415,6 +418,7 @@ namespace mRemoteNG.UI.Window
             this.btnScan.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnScan.Location = new System.Drawing.Point(765, 99);
             this.btnScan.Name = "btnScan";
+            this.pnlIp.SetRowSpan(this.btnScan, 2);
             this.btnScan.Size = new System.Drawing.Size(110, 24);
             this.btnScan.TabIndex = 6;
             this.btnScan.Text = "&Scan";
@@ -492,7 +496,6 @@ namespace mRemoteNG.UI.Window
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(884, 461);
             this.Controls.Add(this.pnlMain);
-            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PortScanWindow";
             this.TabText = "Port Scan";
             this.Text = "Port Scan";
